@@ -5,17 +5,23 @@ const typeDefs = gql`
     _id: ID
     username: String!
     email: String!
-    bookCount: Int
-    savedBooks: [Book]
+    biteSites: [BiteSite]
   }
 
-  type Book {
-    bookId: String!
-    authors: [String]
-    description: String!
-    title: String!
-    image: String
-    link: String
+  type BiteSite {
+    _id: ID
+    facebook: String
+    instagram: String
+    tikTok: String
+    snapchat: String
+    youTube: String
+    twitter: String
+    whatsApp: String
+    linkedIn: String
+    pinterest: String
+    soundCloud: String
+    appleMusic: String
+    spotify: String
   }
 
   type Auth {
@@ -29,26 +35,35 @@ const typeDefs = gql`
 
   type Mutation {
     login(
-      email: String!, 
+      email: String!
       password: String!
     ): Auth
 
     addUser(
-      username: String!, 
-      email: String!, 
+      username: String!
+      email: String!
       password: String!
     ): Auth
 
-    saveBook(
-      bookId: String!
-      authors: [String]!, 
-      description: String,
-      title: String!,
-      image: String,
-      link: String
+    saveBiteSite(
+      _id: ID
+      facebook: String
+      instagram: String
+      tikTok: String
+      snapchat: String
+      youTube: String
+      twitter: String
+      whatsApp: String
+      linkedIn: String
+      pinterest: String
+      soundCloud: String
+      appleMusic: String
+      spotify: String
     ): User
 
-    removeBook(bookId: String!): User
+    removeBiteSite(
+      _id: ID!
+    ): User
   }
 `;
 

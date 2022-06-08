@@ -1,8 +1,6 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
-
-// import schema from Book.js
-const biteSitesSchema = require('./BiteSites');
+const biteSiteSchema = require('./BiteSite');
 
 const userSchema = new Schema(
   {
@@ -21,8 +19,7 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    // set savedBooks to be an array of data that adheres to the bookSchema
-    biteSites: [biteSitesSchema],
+    biteSites: [biteSiteSchema],
   },
 );
 
