@@ -6,9 +6,9 @@ const resolvers = {
   Query: {
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id }).populate('savedBooks');
+        return User.findOne({ _id: context.user._id }).populate('biteSites');
       }
-      throw new AuthenticationError('You need to be logged in!');
+      throw new AuthenticationError('You need to be logged in.');
     },
   },
 
@@ -21,32 +21,64 @@ const resolvers = {
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
       if (!user) {
-        throw new AuthenticationError('No user found with this email address');
+        throw new AuthenticationError('No user found with this email address.');
       }
 
       const correctPw = await user.isCorrectPassword(password);
       if (!correctPw) {
-        throw new AuthenticationError('Incorrect credentials');
+        throw new AuthenticationError('Incorrect credentials.');
       }
       const token = signToken(user);
 
       return { token, user };
     },
-    saveBook: async (parent, { bookId, authors, description, title, image, link }, context) => {
+    saveBiteSite: async (parent, {
+      _id,
+      facebook,
+      instagram,
+      tikTok,
+      snapchat,
+      youTube,
+      twitter,
+      whatsApp,
+      linkedIn,
+      pinterest,
+      soundCloud,
+      appleMusic,
+      spotify,
+    }, context) => {
       if (context.user) {
         return await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { savedBooks: { bookId, authors, description, title, image, link } } },
+          {
+            $addToSet: {
+              biteSites: {
+                _id,
+                facebook,
+                instagram,
+                tikTok,
+                snapchat,
+                youTube,
+                twitter,
+                whatsApp,
+                linkedIn,
+                pinterest,
+                soundCloud,
+                appleMusic,
+                spotify,
+              }
+            }
+          },
           { new: true },
         );
       }
       throw new AuthenticationError('You need to be logged in!');
     },
-    removeBook: async (parent, { bookId }, context) => {
+    removeBiteSite: async (parent, { _id }, context) => {
       if (context.user) {
         return await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $pull: { savedBooks: { bookId } } },
+          { $pull: { biteSites: { _id } } },
           { new: true },
         );
       }
