@@ -62,36 +62,50 @@ const BiteSiteCreator = () => {
 
   return (
     <>
-     <div role="group">
-    <h2 class="myTitleForUserClass" id="SoMeEmbedSelect">What SoMe would you like to embed?</h2>
+    <div role="group">
+    <h2 class="myTitleForUserClass" id="SoMeEmbedSelect">Which social would you like to embed?</h2>
     <p class="myInstructionsToUserClass" id="SoMeEmbedSelectInstruct">Select one SoMe to embed. (required)</p>
-    <div class="ui-grid ui-grid--flush is-multiline is-mobile ui-grid--compressed">
-        <div class="ui-grid-col">
-            <div class="ui-input__checkboxblock ui-bg__paper--supreme">
-                <input class="ui-input__checkboxBlock"
-                    id="mySoMe1"
-                    name="mySoMe1_Unknown" type="checkbox" value=""></input>
-                <label class="myClassLabel"
-                    for="mySoMe1" >mySoMe1</label>
-            </div>
-        </div>
-        <div class="ui-grid-col">
-            <div class="ui-input__checkboxblock ui-bg__paper--supreme">
-                <input class="ui-input__checkboxBlock"
-                    id="mySoMe2"
-                    name="mySoMe2_Unknown" type="checkbox" value=""></input>
-                    <label class="myClassLabel"
-                    for="mySoMe2" >mySoMe2</label>
-            </div>
-        </div>
-        <div class="ui-grid-col">
-            <div class="ui-input__checkboxblock ui-bg__paper--supreme">
-                <input class="ui-input__checkboxBlock" id="mySoMe3"
-                    name="mySoMe3_Unknown" type="checkbox" value=""></input>
-                    <label class="myClassLabel"
-                    for="mySoMe3" >mySoMe3</label>
-            </div>
-        </div>
+    <div class="grid grid-rows-3 grid-flow-col gap-5">
+          <div class="p-3 rounded-lg shadow-lg bg-pink-500">
+              <input class="ui-input__checkboxBlock"
+                  id="mySoMe1"
+                  name="mySoMe1_Unknown" type="checkbox" value=""></input>
+              <label class="myClassLabel"
+                  for="mySoMe1" >mySoMe1</label>
+          </div>
+          <div class="p-3 rounded-lg shadow-lg bg-pink-500">
+              <input class="ui-input__checkboxBlock"
+                  id="mySoMe2"
+                  name="mySoMe2_Unknown" type="checkbox" value=""></input>
+                  <label class="myClassLabel"
+                  for="mySoMe2" >mySoMe2</label>
+          </div>
+          <div class="p-3 rounded-lg shadow-lg bg-pink-500">
+              <input class="ui-input__checkboxBlock" id="mySoMe3"
+                  name="mySoMe3_Unknown" type="checkbox" value=""></input>
+                  <label class="myClassLabel"
+                  for="mySoMe3" >mySoMe3</label>
+          </div>
+          <div class="p-3 rounded-lg shadow-lg bg-pink-500">
+              <input class="ui-input__checkboxBlock"
+                  id="mySoMe1"
+                  name="mySoMe1_Unknown" type="checkbox" value=""></input>
+              <label class="myClassLabel"
+                  for="mySoMe1" >mySoMe1</label>
+          </div>
+          <div class="p-3 rounded-lg shadow-lg bg-pink-500">
+              <input class="ui-input__checkboxBlock"
+                  id="mySoMe2"
+                  name="mySoMe2_Unknown" type="checkbox" value=""></input>
+                  <label class="myClassLabel"
+                  for="mySoMe2" >mySoMe2</label>
+          </div>
+          <div class="p-3 rounded-lg shadow-lg bg-pink-500">
+              <input class="ui-input__checkboxBlock" id="mySoMe3"
+                  name="mySoMe3_Unknown" type="checkbox" value=""></input>
+                  <label class="myClassLabel"
+                  for="mySoMe3" >mySoMe3</label>
+          </div>
     </div>
 </div>
   {/* <!-- perhaps consider putting an icon on the button conveying that the user should advance --> */}
