@@ -16,8 +16,11 @@ export default function downloadFile() {
     }
     return(conCat)
     }
-    const buttonObject = repeatFunction();
-        const button = buttonObject;
+    let embed = `<div style="margin-left:10%;margin-right:10%;border-radius:15px;">
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/50MzJhO0pMjTsfpeOmZ1so?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+</div>`
+    const buttonObjects = repeatFunction();
+        const button = buttonObjects;
         const templateString = `<!DOCTYPE html>
         <html class="background" style="background-color:black;" lang="en">
         <head>
@@ -27,7 +30,7 @@ export default function downloadFile() {
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>BITE SITES</title>
             <script src="https://cdn.tailwindcss.com"></script>
-            <link rel="stylesheet" href="https://trayskirrtfrixko.com/style.css">
+            <link rel="stylesheet" href="https://bitesites.net/style.css">
             <style>
             
         </style>
@@ -52,14 +55,15 @@ export default function downloadFile() {
         </div>
         ${button}
             <div class="h-10"></div>
+            ${embed}
+            <div class="h-10"></div>
             <p class="text-gray-300 font-light flex justify-center">"BITE SITE NICKNAME"</p>
                 <div class="h-10"></div>
-                <div class="h-10"></div>
-                <a href="mailto:nick@getmighty.net"><p style="color:rgb(75, 75, 75)" class="flex justify-center text-white font-sans">Site courtesy of GETMIGHTY.NET</p></a>
+                <a href="mailto:nick@getmighty.net"><p style="color:rgb(75, 75, 75)" class="flex justify-center text-white font-sans">Site courtesy of BITESITES.NET</p></a>
                 <a href="mailto:nick@getmighty.net"><p style="color:rgb(75, 75, 75)" class="flex justify-center text-white font-sans">click here to contact the web developer</p></a>
                 <div class="h-10"></div>
             </main>
-            <script src="https://trayskirrtfrixko.com/script.js"></script>
+            <script src="https://bitesites.net/script.js"></script>
         
             </body>
         </html>`
