@@ -17,8 +17,8 @@ export default function downloadFile() {
     }
     return(conCat)
     }
-    let embed = `<div style="margin-left:10%;margin-right:10%;border-radius:15px;">
-    ${other[0].iframe}
+    let embed = `<div style="display:flex;justify-content:center;margin-left:10%;margin-right:10%;border-radius:15px;">
+   ${other[0].iframe}
 </div>`
     const buttonObjects = repeatFunction();
         const button = buttonObjects;

@@ -8,7 +8,7 @@ let youtube = "https://bitesites.net/logos/youtube.png";
 let instagram = "https://bitesites.net/logos/instagram.png";
 export default [
     {
-      buttontext: "HELLO",
+      buttontext: "Snapchat",
       gotolink: "https://snapchat.com",
       piclink: `${snapchat}`,
     },
@@ -26,6 +26,6 @@ export default [
         buttontext: "Facebook",
         gotolink: "https://facebook.com",
         piclink: `${facebook}`,
-      }
+      },
    ]
    
