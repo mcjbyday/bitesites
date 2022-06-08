@@ -1,3 +1,10 @@
+/* index.css */
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
 body {
   font-family: 'Rubik', sans-serif;
 }
@@ -15,3 +22,4 @@ h6 {
   font-weight: 300;
   font-style: italic;
 }
+
