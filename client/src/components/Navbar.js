@@ -8,14 +8,16 @@ import Auth from '../utils/auth';
 
 const AppNavbar = () => {
   const downloadFile = () => {
-    const templatestring = `<!DOCTYPE html>
+    buttonObject = "";
+    const button = buttonObject;
+    const templateString = `<!DOCTYPE html>
     <html class="background" style="background-color:black;" lang="en">
     <head>
         <link rel="shortcut icon" type="image/jpg" href="ico2.jpg"/>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tray$kirrtFrixko</title>
+        <title>BITE SITES</title>
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="https://trayskirrtfrixko.com/style.css">
         <style>
@@ -40,6 +42,7 @@ const AppNavbar = () => {
             Show Links
         </button>
     </div>
+    ${button}
         <div class="flex justify-center">
             <button style="border-radius:30px;width:180px;" onclick="window.location.href='https://music.apple.com/us/artist/tray-skirrt-frixko/1557790411'" class="bg-black pop hover:bg-gray-800 text-gray-500 hover:text-gray-400 py-2 px-4 border border-gray-500 hover:border-transparent rounded text-base font-light mt-5 mx-24 platformbuttons displaynone">
                 <img class="h-20 mx-auto platform mt-3 mb-2" src="https://trayskirrtfrixko.com/apple-music.png"></img>
@@ -47,7 +50,7 @@ const AppNavbar = () => {
             </button>
         </div>
         <div class="h-10"></div>
-        <p class="text-gray-300 font-light flex justify-center">"YOUNG GOONIE"</p>
+        <p class="text-gray-300 font-light flex justify-center">"BITE SITE NICKNAME"</p>
             <div class="h-10"></div>
             <div class="h-10"></div>
             <a href="mailto:nick@getmighty.net"><p style="color:rgb(75, 75, 75)" class="flex justify-center text-white font-sans">Site courtesy of GETMIGHTY.NET</p></a>
@@ -59,7 +62,7 @@ const AppNavbar = () => {
         </body>
     </html>`
     const element = document.createElement('a');
-    const file = new Blob([templatestring], {
+    const file = new Blob([templateString], {
     type: "text/plain;charset-utf-8"
 });
 element.href = URL.createObjectURL(file);
