@@ -24,7 +24,7 @@ export default function downloadFile() {
         const templateString = `<!DOCTYPE html>
         <html class="background" style="background-color:black;" lang="en">
         <head>
-            <link rel="shortcut icon" type="image/jpg" href="ico2.jpg"/>
+            <link rel="shortcut icon" type="image/png" href="https://bitesites.net/assets/favicon.png"/>
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
