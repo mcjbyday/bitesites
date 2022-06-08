@@ -46,7 +46,6 @@ const typeDefs = gql`
     ): Auth
 
     saveBiteSite(
-      _id: ID
       facebook: String
       instagram: String
       tikTok: String

@@ -24,38 +24,50 @@ export const LOGIN_USER = gql`
   }
 `;
 
-export const SAVE_BOOK = gql`
-  mutation saveBook($bookId: String!, $authors: [String]!, $title: String!, $description: String, $image: String, $link: String) {
-  saveBook(bookId: $bookId, authors: $authors, title: $title, description: $description, image: $image, link: $link) {
-    _id
-    username
-    bookCount
-    savedBooks {
-      bookId
-      authors
-      description
-      title
-      image
-      link
+export const SAVE_BITESITE = gql`
+  mutation saveBiteSite($facebook: String, $instagram: String, $tikTok: String, $snapchat: String, $youTube: String, $twitter: String, $whatsApp: String, $linkedIn: String, $pinterest: String, $soundCloud: String, $appleMusic: String, $spotify: String) {
+    saveBiteSite(facebook: $facebook, instagram: $instagram, tikTok: $tikTok, snapchat: $snapchat, youTube: $youTube, twitter: $twitter, whatsApp: $whatsApp, linkedIn: $linkedIn, pinterest: $pinterest, soundCloud: $soundCloud, appleMusic: $appleMusic, spotify: $spotify) {
+      _id
+      username
+      biteSites {
+        _id
+        facebook
+        instagram
+        tikTok
+        snapchat
+        youTube
+        twitter
+        whatsApp
+        linkedIn
+        pinterest
+        soundCloud
+        appleMusic
+        spotify
+      }
     }
   }
-}
 `;
 
-export const REMOVE_BOOK = gql`
-  mutation removeBook($bookId: String!) {
-  removeBook(bookId: $bookId) {
-    _id
-    username
-    bookCount
-    savedBooks {
-      bookId
-      authors
-      description
-      title
-      image
-      link
+export const REMOVE_BITESITE = gql`
+  mutation removeBiteSite($id: ID!) {
+    removeBiteSite(_id: $id) {
+      _id
+      username
+      biteSites {
+        _id
+        facebook
+        instagram
+        tikTok
+        snapchat
+        youTube
+        twitter
+        whatsApp
+        linkedIn
+        pinterest
+        soundCloud
+        appleMusic
+        spotify
+      }
     }
   }
-}
 `;
