@@ -7,11 +7,32 @@ import LoginForm from './LoginForm';
 import Auth from '../utils/auth';
 
 const AppNavbar = () => {
+  const downloadFile = () => {
+    const templatestring = `<html><h1>Hello</h1></html>`
+    const element = document.createElement('a');
+    const file = new Blob([templatestring], {
+    type: "text/plain;charset-utf-8"
+});
+element.href = URL.createObjectURL(file);
+element.download = "index.html";
+document.body.appendChild(element);
+element.click();
+}
   // set modal display state
   const [showModal, setShowModal] = useState(false);
 
   return (
     <>
+    <section class="card spacerbottom">
+    <div class="cardheader">
+<div class="spacer port"/>
+</div>
+<div class="spacer"/>
+<div class="cardtext">
+<button onClick={downloadFile} id="resumebutton" class="platformbuttons">Download File</button>
+</div>
+<div class="spacer"/>
+</section>
       <Navbar bg='dark' variant='dark' expand='lg'>
         <Container fluid>
           <Navbar.Brand as={Link} to='/'>
