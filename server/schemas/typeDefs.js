@@ -10,7 +10,7 @@ const typeDefs = gql`
 
   type BiteSite {
     _id: ID
-    namePlate: String
+    namePlate: String!
     footerNamePlate: String
     avatar: String
     favicon: String
@@ -51,7 +51,7 @@ const typeDefs = gql`
     ): Auth
 
     saveBiteSite(
-      namePlate: String
+      namePlate: String!
       footerNamePlate: String
       avatar: String
       favicon: String
