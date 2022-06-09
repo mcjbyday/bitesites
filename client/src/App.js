@@ -1,9 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import SearchBooks from './pages/SearchBooks';
-// import SavedBooks from './pages/SavedBooks';
 import BiteSiteCreator from './pages/BiteSiteCreator';
-import Navbar from './components/Navbar';
+// import Navbar from './components/Navbar';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
@@ -31,10 +29,11 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-function App() {
+export default function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
+<<<<<<< HEAD
         <>
           <Navbar />
           <Routes>
@@ -56,9 +55,15 @@ function App() {
             /> */}
           </Routes>
         </>
+=======
+        <Routes>
+          <Route 
+              path='/' 
+              element={<BiteSiteCreator />} 
+                /> 
+        </Routes>
+>>>>>>> 562543c9392297e7d00e631a6401979ac8917031
       </Router>
     </ApolloProvider>
-  );
-}
-
-export default App;
+  )
+};
