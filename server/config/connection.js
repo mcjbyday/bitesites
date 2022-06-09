@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // database name is googlEbooks as indicated by url below
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/biteSiteDB', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/biteSitesDB', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
