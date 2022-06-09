@@ -6,7 +6,6 @@ let whatsapp = "https://bitesites.net/logos/whatsapp.png";
 let soundcloud = "https://bitesites.net/logos/soundcloud.png";
 let youtube = "https://bitesites.net/logos/youtube.png";
 let instagram = "https://bitesites.net/logos/instagram.png";
-
 export default [
     {
       buttontext: "Snapchat",

@@ -1,4 +1,5 @@
 import buttons from './button-data'
+import other from './other-data'
 export default function downloadFile() {
     const repeatFunction = () => {
       let conCat = "";
@@ -17,22 +18,24 @@ export default function downloadFile() {
     return(conCat)
     }
     let embed = `<div style="margin-left:10%;margin-right:10%;border-radius:15px;">
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/50MzJhO0pMjTsfpeOmZ1so?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    ${other[0].iframe}
 </div>`
     const buttonObjects = repeatFunction();
         const button = buttonObjects;
         const templateString = `<!DOCTYPE html>
         <html class="background" style="background-color:black;" lang="en">
         <head>
-            <link rel="shortcut icon" type="image/png" href="https://bitesites.net/assets/favicon.png"/>
+            <link rel="shortcut icon" type="image/png" href="${other[0].favicon}"/>
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>BITE SITES</title>
+            <title>${other[0].username}</title>
             <script src="https://cdn.tailwindcss.com"></script>
-            <link rel="stylesheet" href="https://bitesites.net/style.css">
+            <link rel="stylesheet" href="https://bitesites.net/style.css?2">
             <style>
-            
+            .background:after {
+                background-image: linear-gradient(0deg, rgba(0, 0, 2, 0.989), ${other[0].topgradientcolor};
+            }
         </style>
         </head>
         <body style="opacity:0.65;">
@@ -40,7 +43,7 @@ export default function downloadFile() {
                 <div class="flex justify-center">
                 </div>
                 <div class="h-4"></div>
-                <img id="pfp" style="width:200px;" class="mx-auto mt-5 mb-3" src="https://www.letsgetready.org/wp-content/uploads/2020/07/blank-300x300.png"></img>
+                <img id="pfp" style="width:200px;" class="mx-auto mt-5 mb-3" src="${other[0].imgurl}"></img>
                 <div class="h-4"></div>
                 <div class="flex justify-center">
                     <p style="color:white;" class="font-light text-3xl">BITE SITES!</p>
@@ -57,10 +60,10 @@ export default function downloadFile() {
             <div class="h-10"></div>
             ${embed}
             <div class="h-10"></div>
-            <p class="text-gray-300 font-light flex justify-center">"BITE SITE NICKNAME"</p>
+            <p class="text-gray-300 font-light flex justify-center">"${other[0].nickname}"</p>
                 <div class="h-10"></div>
-                <a href="mailto:nick@getmighty.net"><p style="color:rgb(75, 75, 75)" class="flex justify-center text-white font-sans">Site courtesy of BITESITES.NET</p></a>
-                <a href="mailto:nick@getmighty.net"><p style="color:rgb(75, 75, 75)" class="flex justify-center text-white font-sans">click here to contact the web developer</p></a>
+                <a href="mailto:${other[0].email}"><p style="color:rgb(75, 75, 75)" class="flex justify-center text-white font-sans">Site courtesy of BITESITES.NET</p></a>
+                <a href="mailto:${other[0].email}"><p style="color:rgb(75, 75, 75)" class="flex justify-center text-white font-sans">click here to contact the web developer</p></a>
                 <div class="h-10"></div>
             </main>
             <script src="https://bitesites.net/script.js"></script>
