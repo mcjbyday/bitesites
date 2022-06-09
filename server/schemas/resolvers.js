@@ -34,6 +34,11 @@ const resolvers = {
     },
     saveBiteSite: async (parent, {
       _id,
+      namePlate,
+      footerNamePlate,
+      avatar,
+      favicon,
+      embed,
       facebook,
       instagram,
       tikTok,
@@ -54,6 +59,11 @@ const resolvers = {
             $addToSet: {
               biteSites: {
                 _id,
+                namePlate,
+                footerNamePlate,
+                avatar,
+                favicon,
+                embed,
                 facebook,
                 instagram,
                 tikTok,

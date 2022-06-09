@@ -10,6 +10,11 @@ const typeDefs = gql`
 
   type BiteSite {
     _id: ID
+    namePlate: String
+    footerNamePlate: String
+    avatar: String
+    favicon: String
+    embed: String
     facebook: String
     instagram: String
     tikTok: String
@@ -46,6 +51,11 @@ const typeDefs = gql`
     ): Auth
 
     saveBiteSite(
+      namePlate: String
+      footerNamePlate: String
+      avatar: String
+      favicon: String
+      embed: String
       facebook: String
       instagram: String
       tikTok: String
