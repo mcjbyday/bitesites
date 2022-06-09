@@ -33,36 +33,12 @@ export default function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-<<<<<<< HEAD
-        <>
-          <Navbar />
-          <Routes>
-            <Route
-              path='/'
-              element={<BiteSiteCreator />}
-            />
-            {/* <Route
-              path='/saved'
-              element={<SavedBooks />}
-            />
-            <Route
-              path='/mybitesitecreator'
-              element={<BiteSiteCreator />}
-            />
-            <Route
-              path='*'
-              element={<h1 className='display-2'>Wrong page!</h1>}
-            /> */}
-          </Routes>
-        </>
-=======
         <Routes>
           <Route 
               path='/' 
               element={<BiteSiteCreator />} 
                 /> 
         </Routes>
->>>>>>> 562543c9392297e7d00e631a6401979ac8917031
       </Router>
     </ApolloProvider>
   )
