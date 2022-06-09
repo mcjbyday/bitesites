@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import SearchBooks from './pages/SearchBooks';
-import SavedBooks from './pages/SavedBooks';
+// import SearchBooks from './pages/SearchBooks';
+// import SavedBooks from './pages/SavedBooks';
 import BiteSiteCreator from './pages/BiteSiteCreator';
 import Navbar from './components/Navbar';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
@@ -40,9 +40,9 @@ function App() {
           <Routes>
             <Route
               path='/'
-              element={<SearchBooks />}
+              element={<BiteSiteCreator />}
             />
-            <Route
+            {/* <Route
               path='/saved'
               element={<SavedBooks />}
             />
@@ -53,7 +53,7 @@ function App() {
             <Route
               path='*'
               element={<h1 className='display-2'>Wrong page!</h1>}
-            />
+            /> */}
           </Routes>
         </>
       </Router>

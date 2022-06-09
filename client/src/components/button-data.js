@@ -7,7 +7,7 @@ let soundcloud = "https://bitesites.net/logos/soundcloud.png";
 let youtube = "https://bitesites.net/logos/youtube.png";
 let instagram = "https://bitesites.net/logos/instagram.png";
 let other = "https://bitesites.net/logos/other.png";
-export default [
+    export default [
     // {
     //   buttontext: "Repo Link",
     //   gotolink: "https://github.com/mcjbyday/bitesites/",
@@ -56,6 +56,7 @@ export default [
       {
         buttontext: "Snapchat",
         gotolink: "https://snapchat.com",
+        alt: "Snapchat icon",
         piclink: `${snapchat}`,
       },
       {
@@ -63,5 +64,16 @@ export default [
         gotolink: "https://google.com",
         piclink: `${other}`,
       },
+      {
+        buttontext: "Other Link",
+        gotolink: "https://google.com",
+        piclink: `${other}`,
+      },
+      {
+        buttontext: "Other Link",
+        gotolink: "https://google.com",
+        piclink: `${other}`,
+      },
+      
    ]
    
