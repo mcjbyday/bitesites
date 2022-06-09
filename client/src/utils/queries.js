@@ -8,6 +8,11 @@ export const QUERY_ME = gql`
     email
     biteSites {
       _id
+      namePlate
+      footerNamePlate
+      avatar
+      favicon
+      embed
       facebook
       instagram
       tikTok

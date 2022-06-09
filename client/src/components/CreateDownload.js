@@ -9,7 +9,7 @@ export default function downloadFile() {
       for (let i = 0; i < buttondata.length; i++) {
     conCat += (
       `<div class="flex justify-center">
-        <button style="border-radius:30px;width:180px;" onclick="window.location.href='${buttondata[i].gotolink}'" class="bg-black pop hover:bg-gray-800 text-gray-500 hover:text-gray-400 py-2 px-4 border border-gray-500 hover:border-transparent rounded text-base font-light mt-5 mx-24 platformbuttons displaynone">
+        <button style="border-radius:30px;width:180px;" onclick="window.open('${buttondata[i].gotolink}','_blank')" class="bg-black pop hover:bg-gray-800 text-gray-500 hover:text-gray-400 py-2 px-4 border border-gray-500 hover:border-transparent rounded text-base font-light mt-5 mx-24 platformbuttons displaynone">
             <img class="h-20 mx-auto platform mt-3 mb-2" src="${buttondata[i].piclink}"></img>
             ${buttondata[i].buttontext}
         </button>
