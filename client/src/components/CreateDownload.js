@@ -1,14 +1,17 @@
-import buttons from './button-data'
+import buttondata from './button-data'
 import other from './other-data'
+// let openSection = `<section id="toolong">`;
+// let closeSection = `</section>`;
+    let toolong;
 export default function downloadFile() {
     const repeatFunction = () => {
       let conCat = "";
-      for (let i = 0; i < buttons.length; i++) {
+      for (let i = 0; i < buttondata.length; i++) {
     conCat += (
       `<div class="flex justify-center">
-        <button style="border-radius:30px;width:180px;" onclick="window.location.href='${buttons[i].gotolink}'" class="bg-black pop hover:bg-gray-800 text-gray-500 hover:text-gray-400 py-2 px-4 border border-gray-500 hover:border-transparent rounded text-base font-light mt-5 mx-24 platformbuttons displaynone">
-            <img class="h-20 mx-auto platform mt-3 mb-2" src="${buttons[i].piclink}"></img>
-            ${buttons[i].buttontext}
+        <button style="border-radius:30px;width:180px;" onclick="window.location.href='${buttondata[i].gotolink}'" class="bg-black pop hover:bg-gray-800 text-gray-500 hover:text-gray-400 py-2 px-4 border border-gray-500 hover:border-transparent rounded text-base font-light mt-5 mx-24 platformbuttons displaynone">
+            <img class="h-20 mx-auto platform mt-3 mb-2" src="${buttondata[i].piclink}"></img>
+            ${buttondata[i].buttontext}
         </button>
     </div>`
     )
@@ -21,7 +24,7 @@ export default function downloadFile() {
    ${other[0].iframe}
 </div>`
     const buttonObjects = repeatFunction();
-        const button = buttonObjects;
+        const buttons = buttonObjects;
         const templateString = `<!DOCTYPE html>
         <html class="background" style="background-color:black;" lang="en">
         <head>
@@ -31,7 +34,7 @@ export default function downloadFile() {
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>${other[0].username}</title>
             <script src="https://cdn.tailwindcss.com"></script>
-            <link rel="stylesheet" href="https://bitesites.net/style.css?2">
+            <link rel="stylesheet" href="https://bitesites.net/style.css?3">
             <style>
             .background:after {
                 background-image: linear-gradient(0deg, rgba(0, 0, 2, 0.989), ${other[0].topgradientcolor});
@@ -56,7 +59,9 @@ export default function downloadFile() {
                 Show Links
             </button>
         </div>
-        ${button}
+        <!-- openSection -->
+        ${buttons}
+        <!-- closeSection -->
             <div class="h-10"></div>
             ${embed}
             <div class="h-10"></div>
