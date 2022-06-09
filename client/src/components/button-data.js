@@ -26,6 +26,6 @@ export default [
         buttontext: "Facebook",
         gotolink: "https://facebook.com",
         piclink: `${facebook}`,
-      }
+      },
    ]
    

@@ -17,8 +17,8 @@ export default function downloadFile() {
     }
     return(conCat)
     }
-    let embed = `<div style="margin-left:10%;margin-right:10%;border-radius:15px;">
-    ${other[0].iframe}
+    let embed = `<div style="display:flex;justify-content:center;margin-left:10%;margin-right:10%;border-radius:15px;">
+   ${other[0].iframe}
 </div>`
     const buttonObjects = repeatFunction();
         const button = buttonObjects;
@@ -34,7 +34,7 @@ export default function downloadFile() {
             <link rel="stylesheet" href="https://bitesites.net/style.css?2">
             <style>
             .background:after {
-                background-image: linear-gradient(0deg, rgba(0, 0, 2, 0.989), ${other[0].topgradientcolor};
+                background-image: linear-gradient(0deg, rgba(0, 0, 2, 0.989), ${other[0].topgradientcolor});
             }
         </style>
         </head>
@@ -46,7 +46,7 @@ export default function downloadFile() {
                 <img id="pfp" style="width:200px;" class="mx-auto mt-5 mb-3" src="${other[0].imgurl}"></img>
                 <div class="h-4"></div>
                 <div class="flex justify-center">
-                    <p style="color:white;" class="font-light text-3xl">BITE SITES!</p>
+                    <p style="color:white;" class="font-light text-3xl">${other[0].username}</p>
                     
         
                 </div>
