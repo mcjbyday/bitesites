@@ -1,12 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import SearchBooks from './pages/SearchBooks';
+import SavedBooks from './pages/SavedBooks';
+import BiteSiteCreator from './pages/BiteSiteCreator';
+import Navbar from './components/Navbar';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import Home from './pages/Home';
-import BiteSiteCreator from './pages/BiteSiteCreator';
-import Profile from './pages/Profile';
-import Download from './pages/Download';
-import './App.css'
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -32,29 +31,34 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-export default function App() {
+function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <Routes>
-          <Route
-            path='/'
-            element={<Home />}
-          />
-          <Route
-            path='/BiteSite'
-            element={<BiteSiteCreator />}
-          />
-          <Route
-            path='/Profile'
-            element={<Profile />}
-          />
-          <Route
-            path='/Download'
-            element={<Download />}
-          />
-        </Routes>
+        <>
+          <Navbar />
+          <Routes>
+            <Route
+              path='/'
+              element={<SearchBooks />}
+            />
+            <Route
+              path='/saved'
+              element={<SavedBooks />}
+            />
+            <Route
+              path='/mybitesitecreator'
+              element={<BiteSiteCreator />}
+            />
+            <Route
+              path='*'
+              element={<h1 className='display-2'>Wrong page!</h1>}
+            />
+          </Routes>
+        </>
       </Router>
     </ApolloProvider>
-  )
-};
+  );
+}
+
+export default App;
