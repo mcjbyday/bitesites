@@ -46,7 +46,36 @@ body {
     align-items: center;
     justify-content: center;
 }
+/* 
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+input[type="checkbox"] {
+  position: relative;
+  width: 5em;
+  height: 5em;
+  border: 1px solid gray;
+  color: var(--textcolor1);
+}
 
+input[type="checkbox"]::before {
+  content: "X";
+  position: absolute;
+  font-size: 5em;
+  right: 15px;
+  top: -0.3em;
+  visibility: hidden;
+}
+
+label[for="input"]::after {
+
+}
+
+
+input[type="checkbox"]:checked::before {
+  visibility: visible;
+} */
 
 input[type="text"], input[type="email"], input[type="password"], .form-input, textarea {
   background-color : var(--lightest); 
@@ -114,6 +143,7 @@ top: 0;
 right: 0;
 bottom: 0;
 z-index: -1;
+
 
 background-size: cover;
 }
