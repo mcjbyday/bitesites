@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import downloadFile from '../components/CreateDownload'
 import { useMutation } from '@apollo/client';
-
 import Auth from '../utils/auth';
 
 import { SAVE_BITESITE } from '../utils/mutations';
@@ -127,6 +127,8 @@ const BiteSiteCreator = () => {
                         for="mySoMe2" >mySoMe2</label>
                 </div>
         </div>        
+        <div class="cardtext">
+</div>
     </div>
   {/* <!-- perhaps consider putting an icon on the button conveying that the user should advance --> */}
   {/* <button aria-label="Proceed to step 2" disabled=""

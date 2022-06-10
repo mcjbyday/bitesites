@@ -1,6 +1,9 @@
 import React from 'react';
+import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import BiteSiteCreator from './pages/BiteSiteCreator';
+import Profile from './pages/Profile';
+import Download from './pages/Download';
 // import Navbar from './components/Navbar';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
@@ -37,6 +40,14 @@ export default function App() {
           <Route 
               path='/' 
               element={<BiteSiteCreator />} 
+                /> 
+                <Route 
+              path='/Profile' 
+              element={<Profile/>} 
+                /> 
+                 <Route 
+              path='/Download' 
+              element={<Download/>} 
                 /> 
         </Routes>
       </Router>
