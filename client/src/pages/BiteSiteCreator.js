@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import downloadFile from '../components/CreateDownload'
 import { useMutation } from '@apollo/client';
-
 import Auth from '../utils/auth';
 
 import { SAVE_BITESITE } from '../utils/mutations';

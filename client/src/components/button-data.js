@@ -56,7 +56,6 @@ let other = "https://bitesites.net/logos/other.png";
       {
         buttontext: "Snapchat",
         gotolink: "https://snapchat.com",
-        alt: "Snapchat icon",
         piclink: `${snapchat}`,
       },
       {
@@ -64,16 +63,5 @@ let other = "https://bitesites.net/logos/other.png";
         gotolink: "https://google.com",
         piclink: `${other}`,
       },
-      {
-        buttontext: "Other Link",
-        gotolink: "https://google.com",
-        piclink: `${other}`,
-      },
-      {
-        buttontext: "Other Link",
-        gotolink: "https://google.com",
-        piclink: `${other}`,
-      },
-      
    ]
    
