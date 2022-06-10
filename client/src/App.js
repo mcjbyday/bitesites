@@ -2,13 +2,10 @@ import React from 'react';
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import BiteSiteCreator from './pages/BiteSiteCreator';
-<<<<<<< HEAD
-import EmbedGroup from './components/EmbedGroup';
-=======
 import Profile from './pages/Profile';
 import Download from './pages/Download';
->>>>>>> 837776d08094f641a9d2c9d276105cdc9559edc2
 // import Navbar from './components/Navbar';
+import EmbedGroup from './components/EmbedGroup';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import './App.css'
