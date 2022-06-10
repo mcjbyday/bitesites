@@ -13,7 +13,7 @@ const EmbedForm = ({ buildMySocialChoice }) => {
         <>
             <Formik
                 initialValues={{
-                    checked: [],
+                    socialArray: [],
                 }}
                 onSubmit={async (values) => {
                     await sleep(500);
@@ -24,23 +24,20 @@ const EmbedForm = ({ buildMySocialChoice }) => {
                 {({ values }) => (
                     <Form>
                         {/* 
-            This first radio will result in a boolean value being stored. Note that the `value` prop
-            on the <Field/> is omitted
-          */}
-                        {/* 
-            Multiple radioes with the same name attribute, but different
-            value attributes will be considered a "radio group". Formik will automagically
-            bind the checked values to a single array for your benefit. All the add and remove
-            logic will be taken care of for you.
-          */}
-                        {/* <div id="radio-group" className="grid gap-4 place-content-center specialGrid ">Checked</div> */}
+                            Multiple checkboxes with the same name attribute, but different
+                            value attributes will be considered a "checkbox group". Formik will automagically
+                            bind the socialArray values to a single array for your benefit. All the add and remove
+                            logic will be taken care of for you.
+                        */}
                         <div className='flex-col myFormContainer place-content-center'>
-                            <div role="group" aria-labelledby="radio-group" className="grid gap-4 place-content-center specialGrid ">
+                            <h2 className="py text-xl TitleForUserClass text-center" id="SoMeSocialSelect">Which social URLs would you like to add?</h2>
+                            <p className="py-5 myInstructionsToUserClass text-center" id="SoMeSocialSelectInstruct">Select your social profiles.</p>
+                            <div role="group" aria-labelledby="checkbox-group" className="grid gap-4 place-content-center specialGrid ">
                                 <label className=" aspect-square block max-h-100px border-gray-50 rounded-xl border-2 border-blue-900 transition duration-500 hover:border-white transition duration-500 focus:border-white" style={{ backgroundColor: "var(--darkest)" }} >
-                                    <Field className="" type="radio" name="checked" value="One" />One
+                                    <Field className="" type="checkbox" name="socialArray" value="Charlie" />Charlie
                                 </label>
                                 <label className="aspect-square block max-h-100px border-gray-50 rounded-xl border-2 border-blue-900 transition duration-500 hover:border-white transition duration-500 focus:border-white" style={{ backgroundColor: "var(--darkest)" }} >
-                                    <Field type="radio" name="checked" value="Two" />Two
+                                    <Field type="checkbox" name="socialArray" value="Mary" />Mary
                                 </label>
                             </div>
                             <button type="submit" aria-label="Proceed to step 2" disabled="" className="myButtonAdvanceClass">↓</button>
