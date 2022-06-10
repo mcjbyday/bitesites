@@ -1,5 +1,58 @@
+:root {
+  
+  /* #2E8AE6 is base color */
+  --darkest: rgb(33, 99, 166, 0.65);
+  --flatText: rgb(20, 61, 102, 0.4);
+  --lightest: rgb(46, 138, 230, 0.9);
+  --grayTone: rgb(48, 145, 242, 0.95);
+  --offDark: rgba(41, 122, 204, 0.8);
+  --textcolor1: rgb(255, 255, 255, 1);
+
+  --mainbackg: rgb(15, 46, 77, 1);
+  --backg1: linear-gradient(
+    rgb(15, 46, 77, 1) 30%,
+    rgb(23, 69, 115, 1 ) 70%);
+
+  /* --darkest: rgba(15, 30, 35, 0.95);
+  --flatText: rgb(192, 203, 227, 0.6);
+  --lightest: rgb(192, 203, 227, 0.95);
+  --grayTone: rgb(127, 160, 232, 0.91);
+  --offDark: rgb(55, 65, 99, 0.39);
+  --textcolor1: rgb(255, 255, 255, 1); */
+/* 
+  --darkest: rgb(20, 30, 24, 1);
+  --flatText: rgb(2, 2, 2);
+  --lightest: rgb(124, 200, 154, 1);
+  --grayTone: rgb(127, 138, 131, 1);
+  --offDark: rgba(174, 189, 180, 1);
+  --textcolor1: rgb(255, 255, 255, 1); */
+
+  /* --darkest: rgb(3, 42, 82, 1);
+  --flatText: rgb(121, 169, 217, 1);
+  --lightest: rgb(8, 109, 209, 1);
+  --grayTone: rgb(109, 111, 112, 1);
+  --offDark: rgb(6, 81, 158, 1);
+  --textcolor1: rgb(255, 255, 255, 1); */
+
+}
+
+
+body {
+    background-color: var(--mainbackg);
+    color: var(--textcolor1);
+    padding: 1em 5em 5em 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 #pfp {
   height:200px;
@@ -87,3 +140,23 @@ position:fixed;
   }
 }
 
+.specialGrid { 
+  grid-template-rows: repeat(4, minmax(0, 1fr)); 
+  grid-template-columns: repeat(3, minmax(0, 1fr)); 
+  max-width: 600px;
+  width: 600px;
+}
+
+/* media tags help content display favorably in tablet and mobile browser viewports */
+@media screen and (max-width: 992px) {
+  .specialGrid {
+    grid-template-rows: repeat(6, minmax(0, 1fr)); 
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 290px;
+    width: 290px;
+    padding: 10 10 10 10;
+    }  
+}
+/* 
+@media screen and (max-width: 768px) {
+} */
