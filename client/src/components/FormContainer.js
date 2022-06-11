@@ -52,12 +52,9 @@ const FormContainer = () => {
   // it builds the array depending on the number and type of social medias the user selected in their checklist
   function buildMyIndividualURLs(values) {
     setSocialURLArrayFromUser(values)
-    // console.log("formcounter is\n", formCounter1)
-    // console.log("socialarrayfromuser is\n", socialArrayFromUser.length)
+    console.log(values)
     if (formCounter1 < socialArrayFromUser.length - 1) {
       setFormCounter1(formCounter1 + 1)
-      // console.log("formcounter is\n", formCounter1)
-      // console.log("socialarrayfromuser is\n", socialArrayFromUser.length);
     }
     else {
       setWhichForm(whichForm + 1);
