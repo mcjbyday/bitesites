@@ -29,7 +29,7 @@ const FormContainer = () => {
   // TODO their nameplate / subnameplate (a derivative of the URL form entry )
 
   const [embedChoiceFromUser, setEmbedChoiceFromUser] = useState('');
-  const [socialArrayFromUser, setSocialArrayFromUser] = useState([]);
+  const [socialArrayFromUser, setSocialArrayFromUser] = useState(['Spotify','Snapchat','Placeholder']);
   const [socialURLArrayFromUser, setSocialURLArrayFromUser] = useState([]);
   const [imageURLArrayFromUser, setImageURLArrayFromUser] = useState(['your desired avatar image']);
 
@@ -37,7 +37,7 @@ const FormContainer = () => {
   const [formCounter1, setFormCounter1] = useState(0);
 
   // this logic governs which component to serve to the user depending on their current place in the form flow
-  const [whichForm, setWhichForm] = useState(0)
+  const [whichForm, setWhichForm] = useState(3)
 
   // this gathers user input from embed radio options form component and is passed using props
   function buildMyEmbedChoice(values) {
@@ -55,8 +55,12 @@ const FormContainer = () => {
   // it builds the array depending on the number and type of social medias the user selected in their checklist
   function buildMyIndividualURLs(values) {
     setSocialURLArrayFromUser(values)
-    if (formCounter1 < socialArrayFromUser.length) {
+    console.log("formcounter is\n", formCounter1)
+    console.log("socialarrayfromuser is\n", socialArrayFromUser.length)
+    if (formCounter1 < socialArrayFromUser.length - 1) {
       setFormCounter1(formCounter1 + 1)
+      console.log("formcounter is\n", formCounter1)
+      console.log("socialarrayfromuser is\n", socialArrayFromUser.length);
     }
     else {
       setWhichForm(whichForm + 1);
@@ -82,9 +86,9 @@ const FormContainer = () => {
   }
 
   // social media address placeholder data
+  // https://www.facebook.com/myspacetom
   // https://open.spotify.com/user/122330043
   // https://www.instagram.com/paulmccartney/
-  // https://www.facebook.com/myspacetom
 
   // image placeholder data
   // https://img.freepik.com/free-vector/sticker-template-cat-cartoon-character_1308-73047.jpg?size=338&ext=jpg
@@ -107,7 +111,7 @@ const FormContainer = () => {
         return <TextFieldFormImageNameplate buildMyImageURLArray={buildMyImageURLArray} ></TextFieldFormImageNameplate>
       case 9:
         return (
-        <>
+        <div className="flex-cols space-y-8 ">
           <p>THANKS FOR SUBMITTING - Here's a rocket 🚀 </p>
           <pre
             style={{
@@ -118,7 +122,7 @@ const FormContainer = () => {
           >
             {JSON.stringify(myFinalForm, null, 2)}
           </pre>
-        </>
+        </div>
         )
       default:
         return (

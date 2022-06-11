@@ -144,7 +144,8 @@ input[type="text"], input[type="email"], input[type="password"], .form-input, te
   background-color : var(--darkest); 
   color: var(--textcolor1);
   border: var(--grayTone) solid 1px;
-  border-radius: 1%;
+  border-radius: 5px;
+  text-indent: 0.5em;
 }
 
 .App {

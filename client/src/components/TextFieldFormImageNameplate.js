@@ -27,14 +27,17 @@ const TextFieldFormImageNameplate = ({buildMyImageURLArray}) => {
                 }}
             >
                 <Form className="space-x-4 space-y-4 text-center ">
-                    <label htmlFor="avatarURLForm">URL for <span style={{ fontWeight: "900" }}>your avatar image</span></label>
-                    <Field type="text" id="avatarURLForm" name="avatarURL" placeholder="Image URL" />
-                    <label htmlFor="nameplateForm">Provide a <span style={{ fontWeight: "900" }}>nameplate</span> for your page</label>
-                    <Field type="text" id="nameplateForm" name="nameplate" placeholder="Your nameplate here" />
-                    
+                    <div className="space-y-2">
+                        <label htmlFor="avatarURLForm">URL for <span style={{ fontWeight: "900" }}>your avatar image</span></label>
+                        <Field type="text" id="avatarURLForm" name="avatarURL" placeholder="Image URL" />
+                    </div>
+
+                    <div className="space-y-2">
+                        <label htmlFor="nameplateForm">Provide a <span style={{ fontWeight: "900" }}>nameplate</span> for your page</label>
+                        <Field type="text" id="nameplateForm" name="nameplate" placeholder="Your nameplate here" />
+                    </div>
                     <div className="flex flex-col" id="myBottomContainer" >
-                        
-                        <button type="submit" aria-label="Proceed" disabled="" className="w-1/2 m-5 flex place-self-center items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10">✓ Finished adding</button>
+                        <button type="submit" aria-label="Proceed" disabled="" className="w-1/2 h-1/2 m-5 flex place-self-center items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10">✓ Finished adding</button>
                     </div>
                 </Form>
             </Formik>
