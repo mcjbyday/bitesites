@@ -6,7 +6,45 @@ let whatsapp = "https://bitesites.net/logos/whatsapp.png";
 let soundcloud = "https://bitesites.net/logos/soundcloud.png";
 let youtube = "https://bitesites.net/logos/youtube.png";
 let instagram = "https://bitesites.net/logos/instagram.png";
+let twitter = "https://bitesites.net/logos/twitter.png";
 let other = "https://bitesites.net/logos/other.png";
+
+// facebook: {
+//   type: String,
+// },
+// instagram: {
+//   type: String,
+// },
+// tikTok: {
+//   type: String,
+// },
+// snapchat: {
+//   type: String,
+// },
+// youTube: {
+//   type: String,
+// },
+// twitter: {
+//   type: String,
+// },
+// whatsApp: {
+//   type: String,
+// },
+// linkedIn: {
+//   type: String,
+// },
+// pinterest: {
+//   type: String,
+// },
+// soundCloud: {
+//   type: String,
+// },
+// appleMusic: {
+//   type: String,
+// },
+// spotify: {
+//   type: String,
+// },
     export default [
     // {
     //   buttontext: "Repo Link",
@@ -47,21 +85,73 @@ let other = "https://bitesites.net/logos/other.png";
         buttontext: "Facebook",
         gotolink: "https://facebook.com",
         piclink: `${facebook}`,
+        id: "22",
       },
       {
         buttontext: "Pinterest",
         gotolink: "https://pinterest.com",
         piclink: `${pinterest}`,
+        id: "33",
       },
       {
         buttontext: "Snapchat",
         gotolink: "https://snapchat.com",
         piclink: `${snapchat}`,
+        id: "44",
       },
       {
         buttontext: "Other Link",
         gotolink: "https://google.com",
         piclink: `${other}`,
+        id: "55",
       },
+      {
+          buttontext: "Applemusic",
+          gotolink: "https://google.com",
+          piclink: `${applemusic}`,
+          id: "66",
+        },
+        {
+          buttontext: "Whatsapp",
+          gotolink: "https://google.com",
+          piclink: `${whatsapp}`,
+          id: "77",
+        },
+        {
+          buttontext: "Soundcloud",
+          gotolink: "https://google.com",
+          piclink: `${soundcloud}`,
+          id: "88",
+        },
+        {
+          buttontext: "YouTube",
+          gotolink: "https://google.com",
+          piclink: `${youtube}`,
+          id: "99",
+        },
+        {
+          buttontext: "Instagram",
+          gotolink: "https://google.com",
+          piclink: `${instagram}`,
+          id: "1001",
+        },
+        {
+          buttontext: "tikTok",
+          gotolink: "https://google.com",
+          piclink: `${instagram}`,
+          id: "1004"
+        },
+        {
+          buttontext: "Twitter",
+          gotolink: "https://twitter.com",
+          piclink: `${twitter}`,
+          id: "1004"
+        },
+        {
+          buttontext: "Twitter",
+          gotolink: "https://twitter.com",
+          piclink: `${twitter}`,
+          id: "1009"
+        }
    ]
    
