@@ -31,8 +31,10 @@ const MyTextFieldForm = ({ buildMyIndividualURLs, socialArrayFromUser, formCount
                 <Form>
                     <label htmlFor="thisTextFieldForm">URL for { }</label>
                     <Field type="text" id="thisTextFieldForm" name="thisTextFieldForm" placeholder="Jane" />
-                    <button type="submit" >Save Button</button>
-                    <button type="submit" aria-label="Proceed to step 2" disabled="" className="myButtonAdvanceClass">↓</button>
+                    <div className="flex container place-content-center" id="myBottomContainer" >
+                        <button type="submit" >Save</button>
+                        <button type="submit" aria-label="Proceed" disabled="" className="myButtonAdvanceClass">Finished adding</button>
+                    </div>   
                 </Form>
             </Formik>
         </div>

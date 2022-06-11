@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Formik, Field, Form } from 'formik';
-import RadioOptionList from './RadioOptionList';
+import CheckOptionList from './CheckOptionList';
 import buttondata from './button-data'
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-const SandEmbedForm = ({ buildMyEmbedChoice }) => {
+const SandEmbedForm = ({ buildMySocialChoice }) => {
     // Pass the Formik() hook initial form values and a submit function that will
     // be called when the form is submitted
     // returns to us a goodie bag of form state and helper methods in a variable we call formik
@@ -15,11 +15,11 @@ const SandEmbedForm = ({ buildMyEmbedChoice }) => {
         <>
             <Formik
                 initialValues={{
-                    embedSelection: [],
+                    socialsArray: [],
                 }}
                 onSubmit={async (values) => {
                     await sleep(500);
-                    buildMyEmbedChoice(values)
+                    buildMySocialChoice(values)
                     // alert(JSON.stringify(values, null, 2));
                 }}
             >
@@ -32,7 +32,7 @@ const SandEmbedForm = ({ buildMyEmbedChoice }) => {
                         <div className='flex-col myFormContainer place-content-center'>
                             <h2 className="py text-xl TitleForUserClass text-center" id="SoMeEmbedSelect">Which social would you like to embed?</h2>
                             <p className="py-5 myInstructionsToUserClass text-center" id="SoMeEmbedSelectInstruct">Select one social profile to embed. (required)</p>
-                            <RadioOptionList options={buttondata}></RadioOptionList>
+                            <CheckOptionList options={buttondata}></CheckOptionList>
                             <div className="flex container place-content-center" id="myBottomContainer" >
                                 <button type="submit" aria-label="Proceed to next step" disabled="" className="myButtonAdvanceClass justify-self-center">↓</button>
                             </div>

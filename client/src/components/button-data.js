@@ -8,43 +8,11 @@ let youtube = "https://bitesites.net/logos/youtube.png";
 let instagram = "https://bitesites.net/logos/instagram.png";
 let twitter = "https://bitesites.net/logos/twitter.png";
 let other = "https://bitesites.net/logos/other.png";
+let tiktok = "https://bitesites.net/logos/tiktok.png";
+let spotify = "https://bitesites.net/logos/spotify.png";
 
-// facebook: {
-//   type: String,
-// },
-// instagram: {
-//   type: String,
-// },
-// tikTok: {
-//   type: String,
-// },
-// snapchat: {
-//   type: String,
-// },
-// youTube: {
-//   type: String,
-// },
-// twitter: {
-//   type: String,
-// },
-// whatsApp: {
-//   type: String,
-// },
-// linkedIn: {
-//   type: String,
-// },
-// pinterest: {
-//   type: String,
-// },
-// soundCloud: {
-//   type: String,
-// },
-// appleMusic: {
-//   type: String,
-// },
-// spotify: {
-//   type: String,
-// },
+// still need linkedIn image on bitesites.net
+
     export default [
     // {
     //   buttontext: "Repo Link",
@@ -105,53 +73,53 @@ let other = "https://bitesites.net/logos/other.png";
         piclink: `${other}`,
         id: "55",
       },
-      {
-          buttontext: "Applemusic",
-          gotolink: "https://google.com",
-          piclink: `${applemusic}`,
-          id: "66",
-        },
-        {
-          buttontext: "Whatsapp",
-          gotolink: "https://google.com",
-          piclink: `${whatsapp}`,
-          id: "77",
-        },
-        {
-          buttontext: "Soundcloud",
-          gotolink: "https://google.com",
-          piclink: `${soundcloud}`,
-          id: "88",
-        },
-        {
-          buttontext: "YouTube",
-          gotolink: "https://google.com",
-          piclink: `${youtube}`,
-          id: "99",
-        },
-        {
-          buttontext: "Instagram",
-          gotolink: "https://google.com",
-          piclink: `${instagram}`,
-          id: "1001",
-        },
-        {
-          buttontext: "tikTok",
-          gotolink: "https://google.com",
-          piclink: `${instagram}`,
-          id: "1004"
-        },
-        {
-          buttontext: "Twitter",
-          gotolink: "https://twitter.com",
-          piclink: `${twitter}`,
-          id: "1004"
-        },
-        {
-          buttontext: "Twitter",
-          gotolink: "https://twitter.com",
-          piclink: `${twitter}`,
-          id: "1009"
-        }
+      // {
+      //   buttontext: "Applemusic",
+      //   gotolink: "https://google.com",
+      //   piclink: `${applemusic}`,
+      //   id: "66",
+      // },
+      // {
+      //   buttontext: "Whatsapp",
+      //   gotolink: "https://google.com",
+      //   piclink: `${whatsapp}`,
+      //   id: "77",
+      // },
+      // {
+      //   buttontext: "Soundcloud",
+      //   gotolink: "https://google.com",
+      //   piclink: `${soundcloud}`,
+      //   id: "88",
+      // },
+      // {
+      //   buttontext: "YouTube",
+      //   gotolink: "https://google.com",
+      //   piclink: `${youtube}`,
+      //   id: "99",
+      // },
+      // {
+      //   buttontext: "Instagram",
+      //   gotolink: "https://google.com",
+      //   piclink: `${instagram}`,
+      //   id: "1001",
+      // },
+      // {
+      //   buttontext: "tikTok",
+      //   gotolink: "https://google.com",
+      //   piclink: `${tiktok}`,
+      //   id: "1004"
+      // },
+      // {
+      //   buttontext: "Twitter",
+      //   gotolink: "https://twitter.com",
+      //   piclink: `${twitter}`,
+      //   id: "1007"
+      // },
+      // {
+      //   buttontext: "Spotify",
+      //   gotolink: "https://spotify.com",
+      //   piclink: `${spotify}`,
+      //   id: "1010"
+      // }
    ]
    
