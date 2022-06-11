@@ -7,11 +7,11 @@ import EmbedForm from './EmbedForm';
 import SocialForm from './SocialForm'
 import SandEmbedForm from './SandEmbedForm';
 import SandSocialForm from './SandSocialForm'
-
+import TextFieldFormURLs from './TextFieldFormURLs';
 import Auth from '../utils/auth';
 
 import { SAVE_BITESITE } from '../utils/mutations';
-import MyTextFieldForm from './MyTextFieldForm';
+import TextFieldFormImageNameplate from './TextFieldFormImageNameplate';
 
 const FormContainer = () => {
   // this FormContainer contains the logic for each portion of a user's website content submission
@@ -94,17 +94,47 @@ const FormContainer = () => {
   function renderSwitch(whichForm) {
     switch (whichForm) {
       case 0:
+        // get social profile embed from user
         return <SandEmbedForm buildMyEmbedChoice={buildMyEmbedChoice}></SandEmbedForm>
       case 1:
+        // get preferred social profile links from user
         return <SandSocialForm buildMySocialChoice={buildMySocialChoice}></SandSocialForm>
       case 2:
-        return <MyTextFieldForm formCounter1={formCounter1} buildMyIndividualURLs={buildMyIndividualURLs} socialArrayFromUser={socialArrayFromUser}></MyTextFieldForm>
+        // get social profile URLs from user
+        return <TextFieldFormURLs formCounter1={formCounter1} buildMyIndividualURLs={buildMyIndividualURLs} socialArrayFromUser={socialArrayFromUser}></TextFieldFormURLs>
       case 3:
-        return <MyTextFieldForm buildMyImageURLArray={buildMyImageURLArray} imageURLArrayFromUser={imageURLArrayFromUser}></MyTextFieldForm>
+        // get image URL from user
+        return <TextFieldFormImageNameplate buildMyImageURLArray={buildMyImageURLArray} ></TextFieldFormImageNameplate>
       case 9:
-        return <p>THANKS FOR SUBMITTING - Here's a rocket 🚀 </p>
+        return (
+        <>
+          <p>THANKS FOR SUBMITTING - Here's a rocket 🚀 </p>
+          <pre
+            style={{
+              fontSize: '.65rem',
+              padding: '.25rem .5rem',
+              overflowX: 'scroll',
+            }}
+          >
+            {JSON.stringify(myFinalForm, null, 2)}
+          </pre>
+        </>
+        )
       default:
-        return <MyTextFieldForm buildMyIndividualURLs={buildMyIndividualURLs} socialArrayFromUser={socialArrayFromUser}></MyTextFieldForm>
+        return (
+        <>
+        <p>Big Problema</p>
+        <pre
+          style={{
+            fontSize: '.65rem',
+            padding: '.25rem .5rem',
+            overflowX: 'scroll',
+          }}
+        >
+          {JSON.stringify(myFinalForm, null, 2)}
+        </pre>
+      </>
+      )
     }
   }
 

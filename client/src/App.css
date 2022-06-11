@@ -62,8 +62,8 @@ body {
   user-select: none;
 }
 
-
-input[type="checkbox"]:checked::before {
+/* custom CSS for radio buttons */
+input[type="radio"]:checked::before {
   /* Use `visibility` instead of `display` to avoid recalculating layout */
   visibility: visible;
 }
@@ -93,10 +93,6 @@ input[type="radio"]::before {
 }
 
 
-input[type="radio"]:checked::before {
-  /* Use `visibility` instead of `display` to avoid recalculating layout */
-  visibility: visible;
-}
 
 input[type="radio"]:disabled {
   border-color: black;
@@ -104,6 +100,8 @@ input[type="radio"]:disabled {
   color: var(--textcolor1);
 }
 
+
+/* custom CSS for checkboxes */
 input[type="checkbox"] {
   -webkit-appearance: none;
   appearance: none;
@@ -140,11 +138,13 @@ input[type="checkbox"]:disabled {
   color: var(--textcolor1);
 }
 
-
+/*  ensure text is readable throughout app */
 
 input[type="text"], input[type="email"], input[type="password"], .form-input, textarea {
-  background-color : var(--lightest); 
-  color: var(--darkest);
+  background-color : var(--darkest); 
+  color: var(--textcolor1);
+  border: var(--grayTone) solid 1px;
+  border-radius: 1%;
 }
 
 .App {
@@ -241,11 +241,16 @@ position:fixed;
   }
 }
 
+.myButtonAdvanceClass{
+  font-size: 48px;
+}
+
 .specialGrid { 
   grid-template-rows: repeat(4, minmax(0, 1fr)); 
   grid-template-columns: repeat(3, minmax(0, 1fr)); 
   max-width: 600px;
   width: 600px;
+  align-self: center;
 }
 
 /* media tags help content display favorably in tablet and mobile browser viewports */
@@ -255,7 +260,7 @@ position:fixed;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     max-width: 290px;
     width: 290px;
-    padding: 10 10 10 10;
+    /* padding: 10px 10px 10px 10px; */
     }  
 }
 /* 

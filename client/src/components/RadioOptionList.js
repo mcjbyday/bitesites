@@ -10,7 +10,7 @@ const RadioOptionList = ({ options }) => {
     return <RadioOptionItem key={option.id} option={option} />;
   });
   // Here we return our array of RadioOptionItems wrapped inside a parent div
-  return <div role="group" aria-labelledby="radio-group" className="grid gap-4 place-content-center specialGrid ">{renderedList}</div>
+  return <div role="group" aria-labelledby="radio-group" className="grid gap-4 specialGrid ">{renderedList}</div>
 };
 
 export default RadioOptionList;
