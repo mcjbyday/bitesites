@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useMutation } from '@apollo/client';
 
-
 // each of these components uses Formik and component objects to render the appropriate field / option to the user based on the properties of the website builder output
-import EmbedForm from './EmbedForm';
-import SocialForm from './SocialForm'
 import SandEmbedForm from './SandEmbedForm';
 import SandSocialForm from './SandSocialForm'
 import TextFieldFormURLs from './TextFieldFormURLs';
@@ -29,15 +26,15 @@ const FormContainer = () => {
   // TODO their nameplate / subnameplate (a derivative of the URL form entry )
 
   const [embedChoiceFromUser, setEmbedChoiceFromUser] = useState('');
-  const [socialArrayFromUser, setSocialArrayFromUser] = useState(['Spotify','Snapchat','Placeholder']);
+  const [socialArrayFromUser, setSocialArrayFromUser] = useState([]);
   const [socialURLArrayFromUser, setSocialURLArrayFromUser] = useState([]);
-  const [imageURLArrayFromUser, setImageURLArrayFromUser] = useState(['your desired avatar image']);
+  const [imageURLArrayFromUser, setImageURLArrayFromUser] = useState([]);
 
   // this counter tracks the number of social entries they provided in part 2 of the submission flow
   const [formCounter1, setFormCounter1] = useState(0);
 
   // this logic governs which component to serve to the user depending on their current place in the form flow
-  const [whichForm, setWhichForm] = useState(3)
+  const [whichForm, setWhichForm] = useState(0)
 
   // this gathers user input from embed radio options form component and is passed using props
   function buildMyEmbedChoice(values) {
@@ -55,12 +52,12 @@ const FormContainer = () => {
   // it builds the array depending on the number and type of social medias the user selected in their checklist
   function buildMyIndividualURLs(values) {
     setSocialURLArrayFromUser(values)
-    console.log("formcounter is\n", formCounter1)
-    console.log("socialarrayfromuser is\n", socialArrayFromUser.length)
+    // console.log("formcounter is\n", formCounter1)
+    // console.log("socialarrayfromuser is\n", socialArrayFromUser.length)
     if (formCounter1 < socialArrayFromUser.length - 1) {
       setFormCounter1(formCounter1 + 1)
-      console.log("formcounter is\n", formCounter1)
-      console.log("socialarrayfromuser is\n", socialArrayFromUser.length);
+      // console.log("formcounter is\n", formCounter1)
+      // console.log("socialarrayfromuser is\n", socialArrayFromUser.length);
     }
     else {
       setWhichForm(whichForm + 1);

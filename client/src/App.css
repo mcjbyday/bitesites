@@ -107,7 +107,7 @@ input[type="checkbox"] {
   appearance: none;
   position: relative;
   justify-self: start;
-  top: 0.1em;
+  top: 0.2em;
   left: -1.5em;
   width: 3em;
   height: 3em;
@@ -115,6 +115,7 @@ input[type="checkbox"] {
   vertical-align: -2px;
   /* Set here so that Windows' High-Contrast Mode can override */
   color: white;
+  
 }
 
 
@@ -125,6 +126,9 @@ input[type="checkbox"]::before {
   right: 0;
   top: -0.35em;
   visibility: hidden;
+  height: 1em;
+  vertical-align: middle;
+
 }
 
 input[type="checkbox"]:checked::before {

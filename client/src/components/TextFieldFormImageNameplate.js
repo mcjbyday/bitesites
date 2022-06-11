@@ -23,7 +23,7 @@ const TextFieldFormImageNameplate = ({buildMyImageURLArray}) => {
                     await new Promise((r) => setTimeout(r, 500));
                     // console.log(values)
                     
-                    buildMyImageURLArray(URLsArray)
+                    buildMyImageURLArray([values.avatarURL, values.nameplate])
                 }}
             >
                 <Form className="space-x-4 space-y-4 text-center ">
