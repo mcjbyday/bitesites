@@ -96,7 +96,7 @@ const FormContainer = () => {
       case 0:
         return <SandEmbedForm buildMyEmbedChoice={buildMyEmbedChoice}></SandEmbedForm>
       case 1:
-        return <SocialForm buildMySocialChoice={buildMySocialChoice}></SocialForm>
+        return <SandSocialForm buildMySocialChoice={buildMySocialChoice}></SandSocialForm>
       case 2:
         return <MyTextFieldForm formCounter1={formCounter1} buildMyIndividualURLs={buildMyIndividualURLs} socialArrayFromUser={socialArrayFromUser}></MyTextFieldForm>
       case 3:

@@ -73,53 +73,53 @@ let spotify = "https://bitesites.net/logos/spotify.png";
         piclink: `${other}`,
         id: "55",
       },
-      // {
-      //   buttontext: "Applemusic",
-      //   gotolink: "https://google.com",
-      //   piclink: `${applemusic}`,
-      //   id: "66",
-      // },
-      // {
-      //   buttontext: "Whatsapp",
-      //   gotolink: "https://google.com",
-      //   piclink: `${whatsapp}`,
-      //   id: "77",
-      // },
-      // {
-      //   buttontext: "Soundcloud",
-      //   gotolink: "https://google.com",
-      //   piclink: `${soundcloud}`,
-      //   id: "88",
-      // },
-      // {
-      //   buttontext: "YouTube",
-      //   gotolink: "https://google.com",
-      //   piclink: `${youtube}`,
-      //   id: "99",
-      // },
-      // {
-      //   buttontext: "Instagram",
-      //   gotolink: "https://google.com",
-      //   piclink: `${instagram}`,
-      //   id: "1001",
-      // },
-      // {
-      //   buttontext: "tikTok",
-      //   gotolink: "https://google.com",
-      //   piclink: `${tiktok}`,
-      //   id: "1004"
-      // },
-      // {
-      //   buttontext: "Twitter",
-      //   gotolink: "https://twitter.com",
-      //   piclink: `${twitter}`,
-      //   id: "1007"
-      // },
-      // {
-      //   buttontext: "Spotify",
-      //   gotolink: "https://spotify.com",
-      //   piclink: `${spotify}`,
-      //   id: "1010"
-      // }
+      {
+        buttontext: "Applemusic",
+        gotolink: "https://google.com",
+        piclink: `${applemusic}`,
+        id: "66",
+      },
+      {
+        buttontext: "Whatsapp",
+        gotolink: "https://google.com",
+        piclink: `${whatsapp}`,
+        id: "77",
+      },
+      {
+        buttontext: "Soundcloud",
+        gotolink: "https://google.com",
+        piclink: `${soundcloud}`,
+        id: "88",
+      },
+      {
+        buttontext: "YouTube",
+        gotolink: "https://google.com",
+        piclink: `${youtube}`,
+        id: "99",
+      },
+      {
+        buttontext: "Instagram",
+        gotolink: "https://google.com",
+        piclink: `${instagram}`,
+        id: "1001",
+      },
+      {
+        buttontext: "tikTok",
+        gotolink: "https://google.com",
+        piclink: `${tiktok}`,
+        id: "1004"
+      },
+      {
+        buttontext: "Twitter",
+        gotolink: "https://twitter.com",
+        piclink: `${twitter}`,
+        id: "1007"
+      },
+      {
+        buttontext: "Spotify",
+        gotolink: "https://spotify.com",
+        piclink: `${spotify}`,
+        id: "1010"
+      }
    ]
    

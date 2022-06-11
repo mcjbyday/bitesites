@@ -46,36 +46,101 @@ body {
     align-items: center;
     justify-content: center;
 }
-/* 
-input[type="checkbox"] {
-  -webkit-appearance: none;
-  appearance: none;
-}
-input[type="checkbox"] {
+
+.mycustomlabel {
   position: relative;
-  width: 5em;
-  height: 5em;
-  border: 1px solid gray;
-  color: var(--textcolor1);
-}
-
-input[type="checkbox"]::before {
-  content: "X";
-  position: absolute;
-  font-size: 5em;
-  right: 15px;
-  top: -0.3em;
-  visibility: hidden;
-}
-
-label[for="input"]::after {
-
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  text-align: center;
+  /* padding-top: 1em; */
+  padding-bottom: 1em;
+  flex-direction: column;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 
 input[type="checkbox"]:checked::before {
+  /* Use `visibility` instead of `display` to avoid recalculating layout */
   visibility: visible;
-} */
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  justify-self: start;
+  top: 0.1em;
+  left: -1em;
+  width: 3em;
+  height: 3em;
+  /* Adjusts the position of the checkboxes on the text baseline */
+  vertical-align: -2px;
+  /* Set here so that Windows' High-Contrast Mode can override */
+  color: white;
+}
+
+input[type="radio"]::before {
+  content: "●";
+  position: absolute;
+  font-size: 2em;
+  right: 0;
+  top: -0.35em;
+  visibility: hidden;
+}
+
+
+input[type="radio"]:checked::before {
+  /* Use `visibility` instead of `display` to avoid recalculating layout */
+  visibility: visible;
+}
+
+input[type="radio"]:disabled {
+  border-color: black;
+  background: white;
+  color: var(--textcolor1);
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  justify-self: start;
+  top: 0.1em;
+  left: -1.5em;
+  width: 3em;
+  height: 3em;
+  /* Adjusts the position of the checkboxes on the text baseline */
+  vertical-align: -2px;
+  /* Set here so that Windows' High-Contrast Mode can override */
+  color: white;
+}
+
+
+input[type="checkbox"]::before {
+  content: "X";
+  position: absolute;
+  font-size: 2em;
+  right: 0;
+  top: -0.35em;
+  visibility: hidden;
+}
+
+input[type="checkbox"]:checked::before {
+  /* Use `visibility` instead of `display` to avoid recalculating layout */
+  visibility: visible;
+}
+
+input[type="checkbox"]:disabled {
+  border-color: black;
+  background: white;
+  color: var(--textcolor1);
+}
+
+
 
 input[type="text"], input[type="email"], input[type="password"], .form-input, textarea {
   background-color : var(--lightest); 
