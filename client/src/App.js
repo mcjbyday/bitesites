@@ -52,7 +52,7 @@ export default function App() {
             element={<Download />}
           />
           <Route
-            path='/formik'
+            path='/buildbitesite'
             element={<FormContainer />}
           /> 
         </Routes>

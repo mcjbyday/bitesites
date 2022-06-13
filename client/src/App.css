@@ -46,40 +46,110 @@ body {
     align-items: center;
     justify-content: center;
 }
-/* 
+
+.mycustomlabel {
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  text-align: center;
+  /* padding-top: 1em; */
+  padding-bottom: 1em;
+  flex-direction: column;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* custom CSS for radio buttons */
+input[type="radio"]:checked::before {
+  /* Use `visibility` instead of `display` to avoid recalculating layout */
+  visibility: visible;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  justify-self: start;
+  top: 0.1em;
+  left: -1em;
+  width: 3em;
+  height: 3em;
+  /* Adjusts the position of the checkboxes on the text baseline */
+  vertical-align: -2px;
+  /* Set here so that Windows' High-Contrast Mode can override */
+  color: white;
+}
+
+input[type="radio"]::before {
+  content: "●";
+  position: absolute;
+  font-size: 2em;
+  right: 0;
+  top: -0.35em;
+  visibility: hidden;
+}
+
+
+
+input[type="radio"]:disabled {
+  border-color: black;
+  background: white;
+  color: var(--textcolor1);
+}
+
+
+/* custom CSS for checkboxes */
 input[type="checkbox"] {
   -webkit-appearance: none;
   appearance: none;
-}
-input[type="checkbox"] {
   position: relative;
-  width: 5em;
-  height: 5em;
-  border: 1px solid gray;
-  color: var(--textcolor1);
+  justify-self: start;
+  top: 0.2em;
+  left: -1.5em;
+  width: 3em;
+  height: 3em;
+  /* Adjusts the position of the checkboxes on the text baseline */
+  vertical-align: -2px;
+  /* Set here so that Windows' High-Contrast Mode can override */
+  color: white;
+  
 }
+
 
 input[type="checkbox"]::before {
   content: "X";
   position: absolute;
-  font-size: 5em;
-  right: 15px;
-  top: -0.3em;
+  font-size: 2em;
+  right: 0;
+  top: -0.35em;
   visibility: hidden;
+  height: 1em;
+  vertical-align: middle;
+
 }
-
-label[for="input"]::after {
-
-}
-
 
 input[type="checkbox"]:checked::before {
+  /* Use `visibility` instead of `display` to avoid recalculating layout */
   visibility: visible;
-} */
+}
+
+input[type="checkbox"]:disabled {
+  border-color: black;
+  background: white;
+  color: var(--textcolor1);
+}
+
+/*  ensure text is readable throughout app */
 
 input[type="text"], input[type="email"], input[type="password"], .form-input, textarea {
-  background-color : var(--lightest); 
-  color: var(--darkest);
+  background-color : var(--darkest); 
+  color: var(--textcolor1);
+  border: var(--grayTone) solid 1px;
+  border-radius: 5px;
+  text-indent: 0.5em;
 }
 
 .App {
@@ -176,11 +246,16 @@ position:fixed;
   }
 }
 
+.myButtonAdvanceClass{
+  font-size: 48px;
+}
+
 .specialGrid { 
   grid-template-rows: repeat(4, minmax(0, 1fr)); 
   grid-template-columns: repeat(3, minmax(0, 1fr)); 
   max-width: 600px;
   width: 600px;
+  align-self: center;
 }
 
 /* media tags help content display favorably in tablet and mobile browser viewports */
@@ -190,7 +265,7 @@ position:fixed;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     max-width: 290px;
     width: 290px;
-    padding: 10 10 10 10;
+    /* padding: 10px 10px 10px 10px; */
     }  
 }
 /* 
