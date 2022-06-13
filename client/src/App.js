@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import BiteSiteCreator from './pages/BiteSiteCreator';
 import Profile from './pages/Profile';
 import Download from './pages/Download';
+import FormContainer from './components/FormContainer';
 import './App.css'
 
 // Construct our main GraphQL API endpoint
@@ -53,6 +54,10 @@ export default function App() {
             path='/Download'
             element={<Download />}
           />
+          <Route
+            path='/buildbitesite'
+            element={<FormContainer />}
+          /> 
         </Routes>
       </Router>
     </ApolloProvider>
