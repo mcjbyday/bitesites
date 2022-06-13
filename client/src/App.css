@@ -283,7 +283,7 @@ input[type="text"], input[type="email"], input[type="password"], .form-input, te
 
   .specialHeader {
     /* 36px */
-    font-size: 2.2rem;
+    font-size: 200%;
     /* 40px */
     line-height: 2.5rem;
   }
