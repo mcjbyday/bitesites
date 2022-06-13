@@ -3,12 +3,14 @@ const { Schema } = require('mongoose');
 const biteSiteSchema = new Schema({
   namePlate: {
     type: String,
+    required: 'Please enter a name for your website.',
   },
   footerNamePlate: {
     type: String,
   },
   avatar: {
     type: String,
+    default: 'https://bitesites.net/assets/avatar.png'
   },
   favicon: {
     type: String,

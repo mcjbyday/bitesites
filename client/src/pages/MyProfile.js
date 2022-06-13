@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import CreateDownload from '../pages/Download';
-import Profile from '../components/Socials.js';
-import ImageURLS from '../components/ImageURLS.js';
 
 
 export default function Container() {
@@ -9,12 +7,6 @@ export default function Container() {
 
   // This method is checking to see what the value of `currentPage` is. Depending on the value of currentPage, we return the corresponding component to render.
   const renderPage = () => {
-    if (currentPage === 'About') {
-      return <Profile/>;
-    }
-      if (currentPage === 'URLS') {
-        return <ImageURLS/>;
-      }
   };
 
   const handlePageChange = (page) => setCurrentPage(page);

@@ -25,7 +25,7 @@ export const LOGIN_USER = gql`
 `;
 
 export const SAVE_BITESITE = gql`
-  mutation saveBiteSite($namePlate: String, $footerNamePlate: String, $avatar: String, $favicon: String, $embed: String, $facebook: String, $instagram: String, $tikTok: String, $snapchat: String, $youTube: String, $twitter: String, $whatsApp: String, $linkedIn: String, $pinterest: String, $soundCloud: String, $spotify: String, $appleMusic: String) {
+  mutation saveBiteSite($namePlate: String!, $footerNamePlate: String, $avatar: String, $favicon: String, $embed: String, $facebook: String, $instagram: String, $tikTok: String, $snapchat: String, $youTube: String, $twitter: String, $whatsApp: String, $linkedIn: String, $pinterest: String, $soundCloud: String, $spotify: String, $appleMusic: String) {
     saveBiteSite(namePlate: $namePlate, footerNamePlate: $footerNamePlate, avatar: $avatar, favicon: $favicon, embed: $embed, facebook: $facebook, instagram: $instagram, tikTok: $tikTok, snapchat: $snapchat, youTube: $youTube, twitter: $twitter, whatsApp: $whatsApp, linkedIn: $linkedIn, pinterest: $pinterest, soundCloud: $soundCloud, spotify: $spotify, appleMusic: $appleMusic) {
       _id
       username
