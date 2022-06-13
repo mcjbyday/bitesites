@@ -73,7 +73,7 @@ export default function downloadFile(myPageProperties) {
         return (outLinkTags)
     }
     let embed = `<div style="display:flex;justify-content:center;margin-left:10%;margin-right:10%;border-radius:15px;">
-   ${myOtherData.iframe}
+   ${myPageProperties.imagePlusNameplate[2]}
 </div>`
     const buttons = repeatFunction();
     const templateString = `<!DOCTYPE html>
