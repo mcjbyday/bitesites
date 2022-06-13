@@ -5,6 +5,7 @@ import BiteSiteCreator from './pages/BiteSiteCreator';
 import Profile from './pages/Profile';
 import Download from './pages/Download';
 // import Navbar from './components/Navbar';
+import FormContainer from './components/FormContainer';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import './App.css'
@@ -38,18 +39,22 @@ export default function App() {
     <ApolloProvider client={client}>
       <Router>
         <Routes>
-          <Route 
-              path='/' 
-              element={<BiteSiteCreator />} 
-                /> 
-                <Route 
-              path='/Profile' 
-              element={<Profile/>} 
-                /> 
-                 <Route 
-              path='/Download' 
-              element={<Download/>} 
-                /> 
+          <Route
+            path='/'
+            element={<BiteSiteCreator />}
+          />
+          <Route
+            path='/Profile'
+            element={<Profile />}
+          />
+          <Route
+            path='/Download'
+            element={<Download />}
+          />
+          <Route
+            path='/formik'
+            element={<FormContainer />}
+          /> 
         </Routes>
       </Router>
     </ApolloProvider>

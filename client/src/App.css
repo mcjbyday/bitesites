@@ -1,5 +1,4 @@
 :root {
-  
   /* #2E8AE6 is base color */
   --darkest: rgb(33, 99, 166, 0.65);
   --flatText: rgb(20, 61, 102, 0.4);
@@ -7,12 +6,13 @@
   --grayTone: rgb(48, 145, 242, 0.95);
   --offDark: rgba(41, 122, 204, 0.8);
   --textcolor1: rgb(255, 255, 255, 1);
-
+  
   --mainbackg: rgb(15, 46, 77, 1);
   --backg1: linear-gradient(
     rgb(15, 46, 77, 1) 30%,
     rgb(23, 69, 115, 1 ) 70%);
-
+    
+    
   /* --darkest: rgba(15, 30, 35, 0.95);
   --flatText: rgb(192, 203, 227, 0.6);
   --lightest: rgb(192, 203, 227, 0.95);
@@ -45,6 +45,41 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+/* 
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+input[type="checkbox"] {
+  position: relative;
+  width: 5em;
+  height: 5em;
+  border: 1px solid gray;
+  color: var(--textcolor1);
+}
+
+input[type="checkbox"]::before {
+  content: "X";
+  position: absolute;
+  font-size: 5em;
+  right: 15px;
+  top: -0.3em;
+  visibility: hidden;
+}
+
+label[for="input"]::after {
+
+}
+
+
+input[type="checkbox"]:checked::before {
+  visibility: visible;
+} */
+
+input[type="text"], input[type="email"], input[type="password"], .form-input, textarea {
+  background-color : var(--lightest); 
+  color: var(--darkest);
 }
 
 .App {
@@ -108,6 +143,7 @@ top: 0;
 right: 0;
 bottom: 0;
 z-index: -1;
+
 
 background-size: cover;
 }
