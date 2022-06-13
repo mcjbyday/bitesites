@@ -5,6 +5,8 @@ import { useMutation } from '@apollo/client';
 import SandEmbedForm from './SandEmbedForm';
 import SandSocialForm from './SandSocialForm'
 import TextFieldFormURLs from './TextFieldFormURLs';
+import DownloadVariant from './DownloadVariant';
+
 import Auth from '../utils/auth';
 
 import { SAVE_BITESITE } from '../utils/mutations';
@@ -28,7 +30,7 @@ const FormContainer = () => {
   const [embedChoiceFromUser, setEmbedChoiceFromUser] = useState('');
   const [socialArrayFromUser, setSocialArrayFromUser] = useState([]);
   const [socialURLArrayFromUser, setSocialURLArrayFromUser] = useState([]);
-  const [imageURLArrayFromUser, setImageURLArrayFromUser] = useState([]);
+  const [imagePlusNameplateFromUser, setImagePlusNameplateFromUser] = useState([]);
 
   // this counter tracks the number of social entries they provided in part 2 of the submission flow
   const [formCounter1, setFormCounter1] = useState(0);
@@ -38,6 +40,7 @@ const FormContainer = () => {
 
   // this gathers user input from embed radio options form component and is passed using props
   function buildMyEmbedChoice(values) {
+    console.log(values)
     setEmbedChoiceFromUser(values.embedSelection)
     setWhichForm(whichForm + 1);
   }
@@ -64,28 +67,56 @@ const FormContainer = () => {
   // this gathers user input pertaining to their desired profile avatar URL
   // it builds the array depending on the number and type of social medias the user selected in their checklist
   function buildMyImageURLArray(values) {
-    setImageURLArrayFromUser(values)
+    setImagePlusNameplateFromUser(values)
     setWhichForm(9);
   }
 
   // this is for debug purposes to display the form submission content at any point in the form entry flow
-  useEffect(() => { console.log("MyFinalForm is... \n", myFinalForm) })
+  // useEffect(() => { console.log("MyFinalForm is... \n", myFinalForm) })
 
-  // this is the data blob that can passed to the download utility
+  // this is the data blob that can passed to the download utility via props
   let myFinalForm = {
     embed: embedChoiceFromUser,
     social: socialArrayFromUser,
     socialURL: socialURLArrayFromUser,
-    images: imageURLArrayFromUser,
+    imagePlusNameplate: imagePlusNameplateFromUser,
   }
 
-  // social media address placeholder data
-  // https://www.facebook.com/myspacetom
-  // https://open.spotify.com/user/122330043
-  // https://www.instagram.com/paulmccartney/
-
-  // image placeholder data
-  // https://img.freepik.com/free-vector/sticker-template-cat-cartoon-character_1308-73047.jpg?size=338&ext=jpg
+  // let myFinalForm = {
+  //   embed: "snapchattest",
+  //   social: [
+  //     "Facebook",
+  //     "Spotify",
+  //     "Instagram", 
+  //     "delta", 
+  //     "epsilon",
+  //     "zeta",
+  //     "eta",
+  //     "theta",
+  //     "iota",
+  //     "kappa",
+  //     "lamda",
+  //     "mu"],
+  //   socialURL: [
+  //     "https://www.facebook.com/myspacetom",
+  //     "https://open.spotify.com/user/122330043",
+  //     "https://www.instagram.com/paulmccartney/", 
+  //     "socialURL_delta", 
+  //     "socialURL_epsilon",
+  //     "socialURL_zeta",
+  //     "socialURL_eta",
+  //     "socialURL_theta",
+  //     "socialURL_iota",
+  //     "socialURL_kappa",
+  //     "socialURL_lamda",
+  //     "socialURL_mu"],
+  //     imagePlusNameplate: [
+  //       "PandaThaGod",
+  //       "https://img.freepik.com/free-vector/sticker-template-cat-cartoon-character_1308-73047.jpg?size=338&ext=jpg",
+  //       "spotify.com",
+  //       "mr steal yo girl",
+  //       "#e66465"]
+  // }
 
   // this renderSwitch statement governs which form component is displayed at any particular time. users must refresh the page if they want to clear or reset where they are in the form submission process
 
@@ -97,6 +128,7 @@ const FormContainer = () => {
       case 1:
         // get preferred social profile links from user
         return <SandSocialForm buildMySocialChoice={buildMySocialChoice}></SandSocialForm>
+    // TODO need to add an embed link URL entry area.. may be most appropriate right after single site selection? or after remaining socials have been added
       case 2:
         // get social profile URLs from user
         return <TextFieldFormURLs formCounter1={formCounter1} buildMyIndividualURLs={buildMyIndividualURLs} socialArrayFromUser={socialArrayFromUser}></TextFieldFormURLs>
@@ -104,20 +136,7 @@ const FormContainer = () => {
         // get image URL from user
         return <TextFieldFormImageNameplate buildMyImageURLArray={buildMyImageURLArray} ></TextFieldFormImageNameplate>
       case 9:
-        return (
-        <div className="flex-cols space-y-8 ">
-          <p>THANKS FOR SUBMITTING - Here's a rocket 🚀 </p>
-          <pre
-            style={{
-              fontSize: '.65rem',
-              padding: '.25rem .5rem',
-              overflowX: 'scroll',
-            }}
-          >
-            {JSON.stringify(myFinalForm, null, 2)}
-          </pre>
-        </div>
-        )
+        return (<DownloadVariant myFinalForm={myFinalForm} > </DownloadVariant> )
       default:
         return (
         <>

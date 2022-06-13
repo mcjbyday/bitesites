@@ -19,6 +19,7 @@ const SandEmbedForm = ({ buildMySocialChoice }) => {
                 }}
                 onSubmit={async (values) => {
                     await sleep(500);
+                    console.log("my formik values be\n", values)
                     buildMySocialChoice(values)
                     // alert(JSON.stringify(values, null, 2));
                 }}
