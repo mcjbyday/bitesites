@@ -40,18 +40,18 @@ const Signup = () => {
   };
 
   return (
-    <section className=''>
+    <section className='mr-3'>
       <h4>Sign Up</h4>
-      <div className="flex flex-col">
+      <div>
         {data ? (
           <p>
-            Success! You may now head{' '}
-            <Link to="/">back to the homepage.</Link>
+            Success! You may now move on to{' '}
+            <Link to="/buildbitesite">create your new BITESITE!</Link>
           </p>
         ) : (
-          <form onSubmit={handleFormSubmit}>
+          <form onSubmit={handleFormSubmit} className="flex flex-col">
             <input
-              className="form-input"
+              className="form-input my-2"
               placeholder="Your username"
               name="username"
               type="text"
@@ -59,7 +59,7 @@ const Signup = () => {
               onChange={handleInputChange}
             />
             <input
-              className="form-input"
+              className="form-input my-2"
               placeholder="Your email"
               name="email"
               type="email"
@@ -67,7 +67,7 @@ const Signup = () => {
               onChange={handleInputChange}
             />
             <input
-              className="form-input"
+              className="form-input my-2"
               placeholder="******"
               name="password"
               type="password"
@@ -75,7 +75,6 @@ const Signup = () => {
               onChange={handleInputChange}
             />
             <button
-              className="btn btn-block btn-info"
               style={{ cursor: 'pointer' }}
               type="submit"
             >

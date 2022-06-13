@@ -13,10 +13,10 @@ const Home = () => {
 
   return (
     <>
-      <section id="profile" className="background flex flex-col content-center align-text-center">
+      <section id="profile" className="background flex flex-col text-center">
+        <h1 className="text-6xl">B I T E S I T E</h1>
+        <img className="rounded-full my-10 mx-auto" src="https://bitesites.net/assets/favicon.png"></img>
         <Navbar />
-        <img id="pfp" className="mx-auto mt-5 mb-3" src="https://bitesites.net/assets/favicon.png"></img>
-        <h1 className="font-light text-3xl text-white">SITEBITES</h1>
       </section>
     </>
   );

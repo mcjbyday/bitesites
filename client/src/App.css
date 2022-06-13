@@ -159,6 +159,7 @@ input[type="text"], input[type="email"], input[type="password"], .form-input, te
   align-items: center;
   justify-content: center;
 }
+
 #pfp {
   height:200px;
   width:200px;

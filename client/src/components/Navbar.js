@@ -7,8 +7,10 @@ import Auth from '../utils/auth';
 const Navbar = () => {
   return (
     <>
+    <section className="flex justify-center">
       <SignUpForm />
       <LoginForm />
+    </section>
     </>
   );
 };
