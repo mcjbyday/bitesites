@@ -6,11 +6,6 @@ import Home from './pages/Home';
 import BiteSiteCreator from './pages/BiteSiteCreator';
 import Profile from './pages/Profile';
 import Download from './pages/Download';
-<<<<<<< HEAD
-import MyProfile from './pages/MyProfile'
-// import Navbar from './components/Navbar';
-=======
->>>>>>> 904436f555c90041a2f2dc1d97204cee05706a50
 import FormContainer from './components/FormContainer';
 import './App.css'
 
