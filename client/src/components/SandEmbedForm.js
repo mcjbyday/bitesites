@@ -19,6 +19,7 @@ const SandEmbedForm = ({ buildMyEmbedChoice }) => {
                 }}
                 onSubmit={async (values) => {
                     await sleep(500);
+
                     buildMyEmbedChoice(values)
                     // alert(JSON.stringify(values, null, 2));
                 }}
