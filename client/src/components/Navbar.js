@@ -2,13 +2,13 @@ import React from 'react';
 import SignUpForm from './SignupForm';
 import LoginForm from './LoginForm';
 
-const Navbar = () => {
+const Navbar = ({setAuthState}) => {
   return (
     <>
-    <section className="flex justify-center specialForm">
-      <SignUpForm />
-      <LoginForm />
-    </section>
+      <section className="flex justify-center specialForm">
+        <SignUpForm setAuthState={setAuthState} />
+        <LoginForm setAuthState={setAuthState} />
+      </section>
     </>
   );
 };
