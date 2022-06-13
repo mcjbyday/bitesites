@@ -6,20 +6,19 @@
   --grayTone: rgb(48, 145, 242, 0.95);
   --offDark: rgba(41, 122, 204, 0.8);
   --textcolor1: rgb(255, 255, 255, 1);
-  
+
   --mainbackg: rgb(15, 46, 77, 1);
-  --backg1: linear-gradient(
-    rgb(15, 46, 77, 1) 30%,
-    rgb(23, 69, 115, 1 ) 70%);
-    
-    
+  --backg1: linear-gradient(rgb(15, 46, 77, 1) 30%,
+      rgb(23, 69, 115, 1) 70%);
+
+
   /* --darkest: rgba(15, 30, 35, 0.95);
   --flatText: rgb(192, 203, 227, 0.6);
   --lightest: rgb(192, 203, 227, 0.95);
   --grayTone: rgb(127, 160, 232, 0.91);
   --offDark: rgb(55, 65, 99, 0.39);
   --textcolor1: rgb(255, 255, 255, 1); */
-/* 
+  /* 
   --darkest: rgb(20, 30, 24, 1);
   --flatText: rgb(2, 2, 2);
   --lightest: rgb(124, 200, 154, 1);
@@ -38,13 +37,13 @@
 
 
 body {
-    background-color: var(--mainbackg);
-    color: var(--textcolor1);
-    padding: 1em 5em 5em 5em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  background-color: var(--mainbackg);
+  color: var(--textcolor1);
+  padding: 1em 5em 5em 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .mycustomlabel {
@@ -115,7 +114,7 @@ input[type="checkbox"] {
   vertical-align: -2px;
   /* Set here so that Windows' High-Contrast Mode can override */
   color: white;
-  
+
 }
 
 
@@ -145,7 +144,7 @@ input[type="checkbox"]:disabled {
 /*  ensure text is readable throughout app */
 
 input[type="text"], input[type="email"], input[type="password"], .form-input, textarea {
-  background-color : var(--darkest); 
+  background-color: var(--darkest);
   color: var(--textcolor1);
   border: var(--grayTone) solid 1px;
   border-radius: 5px;
@@ -161,20 +160,24 @@ input[type="text"], input[type="email"], input[type="password"], .form-input, te
 }
 
 #pfp {
-  height:200px;
-  width:200px;
+  height: 200px;
+  width: 200px;
 }
+
 #show {
-  border-radius:15px;
+  border-radius: 15px;
 }
+
 .profilebuttons {
-  min-width:400px;
- align-self:center;
+  min-width: 400px;
+  align-self: center;
 }
+
 #this {
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
 }
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -185,6 +188,7 @@ input[type="text"], input[type="email"], input[type="password"], .form-input, te
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -199,27 +203,29 @@ input[type="text"], input[type="email"], input[type="password"], .form-input, te
 .App-link {
   color: #61dafb;
 }
+
 #profile {
-  min-height:100%;
-        animation: transitionIn 3s;
-  background-size:cover;
-  background: transparent; 
+  min-height: 100%;
+  animation: transitionIn 3s;
+  background-size: cover;
+  background: transparent;
 }
 
 #profile:after {
-  content:"";
-position: fixed;
-left: 0;
-top: 0;
-right: 0;
-bottom: 0;
-z-index: -1;
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 
 
-background-size: cover;
+  background-size: cover;
 }
+
 .background:after {
-position:fixed;
+  position: fixed;
   background-size: 100%;
   background-image: linear-gradient(0deg, rgba(0, 0, 2, 0.989), rgba(24, 5, 60, 0.89));
   background-repeat: repeat;
@@ -229,31 +235,33 @@ position:fixed;
   width: 100%;
   z-index: -1;
 }
-  
-    #animar {
-          max-width: 800px;
-          margin: 0 auto;
-      }
-      .displaynone {
-          display:none;
-      }  
+
+#animar {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.displaynone {
+  display: none;
+}
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-.myButtonAdvanceClass{
+.myButtonAdvanceClass {
   font-size: 48px;
 }
 
-.specialGrid { 
-  grid-template-rows: repeat(4, minmax(0, 1fr)); 
-  grid-template-columns: repeat(3, minmax(0, 1fr)); 
+.specialGrid {
+  grid-template-rows: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   max-width: 600px;
   width: 600px;
   align-self: center;
@@ -262,13 +270,32 @@ position:fixed;
 /* media tags help content display favorably in tablet and mobile browser viewports */
 @media screen and (max-width: 992px) {
   .specialGrid {
-    grid-template-rows: repeat(6, minmax(0, 1fr)); 
+    grid-template-rows: repeat(6, minmax(0, 1fr));
     grid-template-columns: repeat(2, minmax(0, 1fr));
     max-width: 290px;
     width: 290px;
     /* padding: 10px 10px 10px 10px; */
-    }  
+  }
+
+  /* add this class to individual item */
+  .specialLoginSignup {
+    margin: 0;
+    margin-top: 2.5rem;
+  }
+
+  /* add this class to container */
+  .specialForm {
+    flex-direction: column;
+  }
+
+  .specialHeader {
+    /* 36px */
+    font-size: 2.2rem;
+    /* 40px */
+    line-height: 2.5rem;
+  }
 }
+
 /* 
 @media screen and (max-width: 768px) {
 } */

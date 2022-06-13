@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
@@ -40,7 +40,7 @@ const Login = () => {
 
   return (
     <>
-      <section className='ml-3'>
+      <section className='ml-3 specialLoginSignup'>
         <h4>Login</h4>
         <div>
           <form onSubmit={handleFormSubmit} className="flex flex-col">

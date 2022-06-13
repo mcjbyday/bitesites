@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 
@@ -41,7 +41,7 @@ const Signup = () => {
   };
 
   return (
-    <section className='mr-3'>
+    <section className='mr-3 specialLoginSignup'>
       <h4>Sign Up</h4>
       <div>
         <form onSubmit={handleFormSubmit} className="flex flex-col">

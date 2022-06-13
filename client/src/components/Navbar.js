@@ -5,7 +5,7 @@ import LoginForm from './LoginForm';
 const Navbar = () => {
   return (
     <>
-    <section className="flex justify-center">
+    <section className="flex justify-center specialForm">
       <SignUpForm />
       <LoginForm />
     </section>
