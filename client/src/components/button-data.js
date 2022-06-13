@@ -32,12 +32,7 @@ let spotify = "https://bitesites.net/logos/spotify.png";
         piclink: `${snapchat}`,
         id: "44",
       },
-      {
-        buttontext: "SEAN",
-        gotolink: "https://instagram.com/Jaxxon_Rxless",
-        piclink: `${other}`,
-        id: "55",
-      },
+      
       {
         buttontext: "Applemusic",
         gotolink: "https://google.com",
@@ -85,6 +80,12 @@ let spotify = "https://bitesites.net/logos/spotify.png";
         gotolink: "https://spotify.com",
         piclink: `${spotify}`,
         id: "1010"
-      }
+      },
+      {
+        buttontext: "Other Link",
+        gotolink: "https://instagram.com/Jaxxon_Rxless",
+        piclink: `${other}`,
+        id: "55",
+      },
    ]
    

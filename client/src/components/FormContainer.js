@@ -101,7 +101,7 @@ const FormContainer = () => {
   //     "https://www.facebook.com/myspacetom",
   //     "https://open.spotify.com/user/122330043",
   //     "https://www.instagram.com/paulmccartney/", 
-  //     "socialURL_delta", 
+  //     "https://twitter.com/elonmusk", 
   //     "socialURL_epsilon",
   //     "socialURL_zeta",
   //     "socialURL_eta",
@@ -111,10 +111,10 @@ const FormContainer = () => {
   //     "socialURL_lamda",
   //     "socialURL_mu"],
   //     imagePlusNameplate: [
-  //       "PandaThaGod",
-  //       "https://img.freepik.com/free-vector/sticker-template-cat-cartoon-character_1308-73047.jpg?size=338&ext=jpg",
-  //       "spotify.com",
-  //       "mr steal yo girl",
+  //       "Sir Paul McCartney",
+  //       "https://64.media.tumblr.com/0acf21102cfc6e9704c92fa76f2f1f38/tumblr_opw6xzyV0W1qkjjebo2_500.png",
+  //       "<iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/246dkjvS1zLTtiykXe5h60?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>",
+  //       "The web is a beautiful place",
   //       "#e66465"]
   // }
 
