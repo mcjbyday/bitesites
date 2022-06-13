@@ -39,8 +39,6 @@ export default function downloadFile() {
         </head>
         <body style="opacity:0.85;">
             <main>
-                <div class="flex justify-center">
-                </div>
                 <div class="h-4"></div>
                 <img id="pfp" style="width:200px;" class="mx-auto mt-5 mb-3" src="${other[0].imgurl}"></img>
                 <div class="h-4"></div>
