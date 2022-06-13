@@ -52,7 +52,7 @@ const TextFieldFormImageNameplate = ({buildMyImageURLArray}) => {
                         <Field type="color" id="colorGradient" name="colorCode" />
                     </div>
                     <div className="flex flex-col" id="myBottomContainer" >
-                        <button type="submit" aria-label="Proceed" disabled="" className="w-1/2 h-1/2 m-5 flex place-self-center items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10">✓ Finished adding</button>
+                        <button type="submit" aria-label="Proceed" disabled="" className="w-1/2 h-1/2 m-5 flex place-self-center items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md bg-green-600 hover:bg-green-700 md:py-4 md:text-lg md:px-10"> Show me my site!</button>
                     </div>
                 </Form>
             </Formik>
