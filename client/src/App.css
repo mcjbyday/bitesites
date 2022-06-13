@@ -163,16 +163,9 @@ input[type="text"], input[type="email"], input[type="password"], .form-input, te
   height: 200px;
   width: 200px;
 }
-
 #show {
   border-radius: 15px;
 }
-
-.profilebuttons {
-  min-width: 400px;
-  align-self: center;
-}
-
 #this {
   display: flex;
   flex-direction: column;

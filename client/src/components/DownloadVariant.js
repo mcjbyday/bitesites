@@ -14,7 +14,7 @@ const DownloadVariant = ({myFinalForm}) => {
   return (
     <>
     <div className="flex-cols space-y-8 ">
-        <button className="profilebuttons hover:bg-gray-800 bg-black text-gray-300 hover:text-gray-100 py-2 px-4 border border-gray-500 hover:border-transparent rounded text-xl font-light mt-5 mx-24" onClick={downloadFile(myFinalForm)}>Download Page</button>
+        <button className="profilebuttons hover:bg-gray-800 bg-black text-gray-300 hover:text-gray-100 py-2 px-4 border border-gray-500 hover:border-transparent rounded text-xl font-light mt-5 mx-24" onClick={()=>downloadFile(myFinalForm)}>Download Page</button>
         <p>THANKS FOR SUBMITTING - Here's a rocket 🚀 </p>
         <pre
           style={{
