@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+import Auth from './utils/auth';
 import Home from './pages/Home';
 import BiteSiteCreator from './pages/BiteSiteCreator';
 import Profile from './pages/Profile';
@@ -40,7 +41,7 @@ export default function App() {
         <Routes>
           <Route
             path='/'
-            element={<Home />}
+            element={Auth.loggedIn() ? <Profile /> : <Home />}
           />
           <Route
             path='/BiteSite'
@@ -48,16 +49,16 @@ export default function App() {
           />
           <Route
             path='/Profile'
-            element={<Profile />}
+            element={Auth.loggedIn() ? <Profile /> : <Home />}
           />
           <Route
             path='/Download'
-            element={<Download />}
+            element={Auth.loggedIn() ? <Download /> : <Home />}
           />
           <Route
             path='/buildbitesite'
-            element={<FormContainer />}
-          /> 
+            element={Auth.loggedIn() ? <FormContainer /> : <Home />}
+          />
         </Routes>
       </Router>
     </ApolloProvider>
