@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import Auth from './utils/auth';
 import Home from './pages/Home';
 import BiteSiteCreator from './pages/BiteSiteCreator';
 import Profile from './pages/Profile';
@@ -28,6 +27,7 @@ const authLink = setContext((_, { headers }) => {
   };
 });
 
+
 const client = new ApolloClient({
   // Set up our client to execute the `authLink` middleware prior to making the request to our GraphQL API
   link: authLink.concat(httpLink),
@@ -35,13 +35,14 @@ const client = new ApolloClient({
 });
 
 export default function App() {
+  const [authState, setAuthState] = useState(localStorage.getItem('id_token'));
   return (
     <ApolloProvider client={client}>
       <Router>
         <Routes>
           <Route
             path='/'
-            element={Auth.loggedIn() ? <Profile /> : <Home />}
+            element={authState ? <Profile /> : <Home setAuthState={setAuthState} />}
           />
           <Route
             path='/BiteSite'
@@ -49,15 +50,15 @@ export default function App() {
           />
           <Route
             path='/Profile'
-            element={Auth.loggedIn() ? <Profile /> : <Home />}
+            element={authState ? <Profile /> : <Home setAuthState={setAuthState} />}
           />
           <Route
             path='/Download'
-            element={Auth.loggedIn() ? <Download /> : <Home />}
+            element={authState ? <Download /> : <Home setAuthState={setAuthState} />}
           />
           <Route
             path='/buildbitesite'
-            element={Auth.loggedIn() ? <FormContainer /> : <Home />}
+            element={authState ? <FormContainer /> : <Home setAuthState={setAuthState} />}
           />
         </Routes>
       </Router>

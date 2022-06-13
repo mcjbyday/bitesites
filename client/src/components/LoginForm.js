@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
-import Auth from '../utils/auth';
 
-const Login = () => {
+const Login = ({setAuthState}) => {
   const [formState, setFormState] = useState({ 
     email: '', 
     password: '',
@@ -31,7 +30,7 @@ const Login = () => {
         variables: { ...formState },
       });
 
-      Auth.login(data.login.token);
+      setAuthState(data.login.token);
       navigate('/buildbitesite');
     } catch (e) {
       console.error(e);

@@ -3,9 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 
-import Auth from '../utils/auth';
-
-const Signup = () => {
+const Signup = ({setAuthState}) => {
   const [formState, setFormState] = useState({
     username: '',
     email: '',
@@ -32,8 +30,8 @@ const Signup = () => {
       const { data } = await addUser({
         variables: { ...formState },
       });
-
-      Auth.login(data.addUser.token);
+console.log(data);
+      setAuthState(data.addUser.token);
       navigate('/buildbitesite');
     } catch (e) {
       console.error(e);
