@@ -3,25 +3,25 @@ import other from './other-data'
 export default function downloadFile() {
 
     const repeatFunction = () => {
-      let conCat = "";
-      for (let i = 0; i < buttondata.length; i++) {
-    conCat += (
-      `<button style="border-radius:30px;width:180px;" onclick="window.open('${buttondata[i].gotolink}','_blank')" class="bg-black pop hover:bg-gray-800 text-gray-500 hover:text-gray-400 py-2 px-4 border border-gray-500 hover:border-transparent rounded text-base font-light mt-5 mx-24 platformbuttons displaynone">
+        let conCat = "";
+        for (let i = 0; i < buttondata.length; i++) {
+            conCat += (
+                `<button style="border-radius:30px;width:180px;" onclick="window.open('${buttondata[i].gotolink}','_blank')" class="bg-black pop hover:bg-gray-800 text-gray-500 hover:text-gray-400 py-2 px-4 border border-gray-500 hover:border-transparent rounded text-base font-light mt-5 mx-24 platformbuttons displaynone">
             <img class="h-20 mx-auto platform mt-3 mb-2" src="${buttondata[i].piclink}"></img>
             ${buttondata[i].buttontext}
         </button>`
-    )
-    console.log(conCat)
-    
-    }
-    return(conCat)
+            )
+            console.log(conCat)
+
+        }
+        return (conCat)
     }
     let embed = `<div style="display:flex;justify-content:center;margin-left:10%;margin-right:10%;border-radius:15px;">
    ${other[0].iframe}
 </div>`
     const buttonObjects = repeatFunction();
-        const buttons = buttonObjects;
-        const templateString = `<!DOCTYPE html>
+    const buttons = buttonObjects;
+    const templateString = `<!DOCTYPE html>
         <html class="background" style="background-color:black;" lang="en">
         <head>
             <link rel="shortcut icon" type="image/png" href="${other[0].favicon}"/>
@@ -69,14 +69,13 @@ export default function downloadFile() {
         
             </body>
         </html>`
-    
-        const element = document.createElement('a');
-        const file = new Blob([templateString], {
+
+    const element = document.createElement('a');
+    const file = new Blob([templateString], {
         type: "text/plain;charset-utf-8"
     });
     element.href = URL.createObjectURL(file);
     element.download = "index.html";
     document.body.appendChild(element);
     element.click();
-    }
-    
+}

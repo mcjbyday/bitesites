@@ -23,7 +23,7 @@ const BiteSiteCreator = () => {
   return (
     <>
     <div className="flex container " id="myContainer" >
-        <div role="group" className="place-content-center " id="myPageBoundary"   >
+        <div role="group" className="place-content-center" id="myFormGroup"   >
             <h2 className="py text-xl TitleForUserClass text-center" id="SoMeEmbedSelect">Which social would you like to embed?</h2>
             <p className="py-5 myInstructionsToUserClass text-center" id="SoMeEmbedSelectInstruct">Select one social profile to embed. (required)</p>
             <div className="grid gap-4 place-content-center specialGrid">

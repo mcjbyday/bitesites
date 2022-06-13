@@ -6,8 +6,17 @@ let whatsapp = "https://bitesites.net/logos/whatsapp.png";
 let soundcloud = "https://bitesites.net/logos/soundcloud.png";
 let youtube = "https://bitesites.net/logos/youtube.png";
 let instagram = "https://bitesites.net/logos/instagram.png";
+<<<<<<< HEAD
 let tiktok = "https://bitesites.net/logos/tiktok.png";
+=======
+let twitter = "https://bitesites.net/logos/twitter.png";
+>>>>>>> 263c182973ced4fcc6627304424a38bf77aa722e
 let other = "https://bitesites.net/logos/other.png";
+let tiktok = "https://bitesites.net/logos/tiktok.png";
+let spotify = "https://bitesites.net/logos/spotify.png";
+
+// still need linkedIn image on bitesites.net
+
     export default [
     // {
     //   buttontext: "Repo Link",
@@ -44,40 +53,77 @@ let other = "https://bitesites.net/logos/other.png";
     //     gotolink: "https://docs.google.com/presentation/d/1ixIoCpN0-zakUb57iWv7OUI4UzmWF7fE13lbA_jnczs/edit?usp=sharing",
     //     piclink: `${other}`,
     //   },
-    // {
-    //     buttontext: "Facebook",
-    //     gotolink: "https://facebook.com",
-    //     piclink: `${facebook}`,
-    //   },
-    //   {
-    //     buttontext: "Pinterest",
-    //     gotolink: "https://pinterest.com",
-    //     piclink: `${pinterest}`,
-    //   },
-    //   {
-    //     buttontext: "Snapchat",
-    //     gotolink: "https://snapchat.com",
-    //     piclink: `${snapchat}`,
-    //   },
-      {
-        buttontext: "TikTok",
-        gotolink: "https://www.tiktok.com/t/ZTd3nxokc/",
-        piclink: `${tiktok}`,
+    {
+        buttontext: "Facebook",
+        gotolink: "https://facebook.com",
+        piclink: `${facebook}`,
+        id: "22",
       },
       {
-        buttontext: "SoundCloud",
-        gotolink: "https://soundcloud.com/user-601899792",
-        piclink: `${soundcloud}`,
+        buttontext: "Pinterest",
+        gotolink: "https://pinterest.com",
+        piclink: `${pinterest}`,
+        id: "33",
       },
       {
-        buttontext: "Instagram",
-        gotolink: "https://instagram.com/Jaxxon_Rxless",
-        piclink: `${instagram}`,
+        buttontext: "Snapchat",
+        gotolink: "https://snapchat.com",
+        piclink: `${snapchat}`,
+        id: "44",
       },
       {
         buttontext: "SEAN",
         gotolink: "https://instagram.com/Jaxxon_Rxless",
         piclink: `${other}`,
+        id: "55",
       },
+      {
+        buttontext: "Applemusic",
+        gotolink: "https://google.com",
+        piclink: `${applemusic}`,
+        id: "66",
+      },
+      {
+        buttontext: "Whatsapp",
+        gotolink: "https://google.com",
+        piclink: `${whatsapp}`,
+        id: "77",
+      },
+      {
+        buttontext: "Soundcloud",
+        gotolink: "https://google.com",
+        piclink: `${soundcloud}`,
+        id: "88",
+      },
+      {
+        buttontext: "YouTube",
+        gotolink: "https://google.com",
+        piclink: `${youtube}`,
+        id: "99",
+      },
+      {
+        buttontext: "Instagram",
+        gotolink: "https://google.com",
+        piclink: `${instagram}`,
+        id: "1001",
+      },
+      {
+        buttontext: "tikTok",
+        gotolink: "https://google.com",
+        piclink: `${tiktok}`,
+        id: "1004"
+      },
+      {
+        buttontext: "Twitter",
+        gotolink: "https://twitter.com",
+        piclink: `${twitter}`,
+        id: "1007"
+      },
+      {
+        buttontext: "Spotify",
+        gotolink: "https://spotify.com",
+        piclink: `${spotify}`,
+        id: "1010"
+      }
    ]
    
